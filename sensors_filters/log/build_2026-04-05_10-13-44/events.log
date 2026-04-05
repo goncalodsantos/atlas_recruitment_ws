@@ -1,0 +1,144 @@
+[0.000000] (-) TimerEvent: {}
+[0.000815] (sensors_filters) JobQueued: {'identifier': 'sensors_filters', 'dependencies': OrderedDict()}
+[0.001313] (sensors_filters) JobStarted: {'identifier': 'sensors_filters'}
+[0.010514] (sensors_filters) JobProgress: {'identifier': 'sensors_filters', 'progress': 'cmake'}
+[0.011566] (sensors_filters) JobProgress: {'identifier': 'sensors_filters', 'progress': 'build'}
+[0.012512] (sensors_filters) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gonca/atlas_recruitment_ws/src/sensors_filters/build/sensors_filters', '--', '-j12', '-l12'], 'cwd': '/home/gonca/atlas_recruitment_ws/src/sensors_filters/build/sensors_filters', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gonca'), ('GIT_ASKPASS', '/home/gonca/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gonca'), ('OLDPWD', '/home/gonca/atlas_recruitment_ws/src'), ('TERM_PROGRAM_VERSION', '1.114.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1003/vscode-ipc-f881e197-e1a7-414e-a5d5-91db16748e2a.sock'), ('ROS_PYTHON_VERSION', '3'), ('GK_GL_PATH', '/tmp/gitkraken/gitlens/gitlens-ipc-server-1541-42965.json'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/gonca/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/gonca/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/gonca/.vscode-server/extensions/ms-python.debugpy-2025.18.0/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1003/bus'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'gonca'), ('NAME', 'goncalopc'), ('WSL_INTEROP', '/run/WSL/1529_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/opt/ros/humble/share/turtlebot3_gazebo/models:/opt/ros/humble/share/turtlebot3_gazebo/models'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/home/gonca/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/gonca/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/gonca/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/bin/remote-cli:/home/gonca/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/gonca/AppData/Local/Programs/Microsoft VS Code:/mnt/c/WinAVR-20100110/bin:/mnt/c/WinAVR-20100110/utils/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin/:/mnt/c/Program Files/IVI Foundation/VISA/Win64/Bin/:/mnt/c/Program Files (x86)/IVI Foundation/IVI/Bin/:/mnt/c/Program Files/IVI Foundation/IVI/Bin/:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin:/mnt/c/Program Files/HP/HP One Agent:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/gonca/Downloads/OpenJDK21U-jdk_x64_windows_hotspot_21.0.6_7/jdk-21.0.6+7/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/MATLAB/R2025b/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2025.3.0/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python39/Scripts/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python39/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python311/Scripts/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python311/:/mnt/c/Users/gonca/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/gonca/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/gonca/anaconda3/Scripts/conda.exe:/mnt/c/Users/gonca/anaconda3/python.exe:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/lib/x64:/mnt/c/msys64/ucrt64/bin:/snap/bin:/home/gonca/.vscode-server/extensions/ms-python.debugpy-2025.18.0/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1003/'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/gonca/.vscode-server/extensions/ms-python.debugpy-2025.18.0/.noConfigDebugAdapterEndpoints/endpoint-8a7bc0290dc61f8b.txt'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/gonca/.vscode-server/data/User/workspaceStorage/766ce0b4fa49d6243f4b9857ecdbd1f6/ms-python.python/pythonrc.py'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1003/vscode-git-8156fe05c8.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GK_GL_ADDR', 'http://127.0.0.1:42965'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/gonca/atlas_recruitment_ws/src/sensors_filters/build/sensors_filters'), ('TURTLEBOT3_MODEL', 'waffle_pi'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.077474] (sensors_filters) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target lidar_filter_node\x1b[0m\n'}
+[0.099383] (-) TimerEvent: {}
+[0.104184] (sensors_filters) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/lidar_filter_node.dir/src/lidar_filter_node.cpp.o\x1b[0m\n'}
+[0.199525] (-) TimerEvent: {}
+[0.300006] (-) TimerEvent: {}
+[0.400547] (-) TimerEvent: {}
+[0.501095] (-) TimerEvent: {}
+[0.601817] (-) TimerEvent: {}
+[0.702332] (-) TimerEvent: {}
+[0.802765] (-) TimerEvent: {}
+[0.903113] (-) TimerEvent: {}
+[1.003481] (-) TimerEvent: {}
+[1.103888] (-) TimerEvent: {}
+[1.204324] (-) TimerEvent: {}
+[1.304802] (-) TimerEvent: {}
+[1.405175] (-) TimerEvent: {}
+[1.505591] (-) TimerEvent: {}
+[1.605984] (-) TimerEvent: {}
+[1.706397] (-) TimerEvent: {}
+[1.806998] (-) TimerEvent: {}
+[1.907673] (-) TimerEvent: {}
+[2.008524] (-) TimerEvent: {}
+[2.109218] (-) TimerEvent: {}
+[2.209823] (-) TimerEvent: {}
+[2.310309] (-) TimerEvent: {}
+[2.410747] (-) TimerEvent: {}
+[2.511216] (-) TimerEvent: {}
+[2.611787] (-) TimerEvent: {}
+[2.712531] (-) TimerEvent: {}
+[2.813169] (-) TimerEvent: {}
+[2.913712] (-) TimerEvent: {}
+[3.014301] (-) TimerEvent: {}
+[3.114747] (-) TimerEvent: {}
+[3.215119] (-) TimerEvent: {}
+[3.315563] (-) TimerEvent: {}
+[3.416049] (-) TimerEvent: {}
+[3.516447] (-) TimerEvent: {}
+[3.616826] (-) TimerEvent: {}
+[3.717162] (-) TimerEvent: {}
+[3.817496] (-) TimerEvent: {}
+[3.917855] (-) TimerEvent: {}
+[4.018260] (-) TimerEvent: {}
+[4.118923] (-) TimerEvent: {}
+[4.219414] (-) TimerEvent: {}
+[4.319770] (-) TimerEvent: {}
+[4.420166] (-) TimerEvent: {}
+[4.520560] (-) TimerEvent: {}
+[4.620946] (-) TimerEvent: {}
+[4.721354] (-) TimerEvent: {}
+[4.821757] (-) TimerEvent: {}
+[4.922251] (-) TimerEvent: {}
+[5.022756] (-) TimerEvent: {}
+[5.123146] (-) TimerEvent: {}
+[5.223681] (-) TimerEvent: {}
+[5.324165] (-) TimerEvent: {}
+[5.424675] (-) TimerEvent: {}
+[5.525300] (-) TimerEvent: {}
+[5.626041] (-) TimerEvent: {}
+[5.726777] (-) TimerEvent: {}
+[5.827319] (-) TimerEvent: {}
+[5.927686] (-) TimerEvent: {}
+[6.028128] (-) TimerEvent: {}
+[6.128498] (-) TimerEvent: {}
+[6.228925] (-) TimerEvent: {}
+[6.329374] (-) TimerEvent: {}
+[6.429715] (-) TimerEvent: {}
+[6.530093] (-) TimerEvent: {}
+[6.630472] (-) TimerEvent: {}
+[6.730786] (-) TimerEvent: {}
+[6.831128] (-) TimerEvent: {}
+[6.931526] (-) TimerEvent: {}
+[7.031941] (-) TimerEvent: {}
+[7.132298] (-) TimerEvent: {}
+[7.232647] (-) TimerEvent: {}
+[7.333003] (-) TimerEvent: {}
+[7.433352] (-) TimerEvent: {}
+[7.533634] (-) TimerEvent: {}
+[7.634035] (-) TimerEvent: {}
+[7.734505] (-) TimerEvent: {}
+[7.834964] (-) TimerEvent: {}
+[7.935369] (-) TimerEvent: {}
+[8.035710] (-) TimerEvent: {}
+[8.136062] (-) TimerEvent: {}
+[8.236481] (-) TimerEvent: {}
+[8.336800] (-) TimerEvent: {}
+[8.437148] (-) TimerEvent: {}
+[8.537582] (-) TimerEvent: {}
+[8.637921] (-) TimerEvent: {}
+[8.738227] (-) TimerEvent: {}
+[8.838542] (-) TimerEvent: {}
+[8.938853] (-) TimerEvent: {}
+[9.039200] (-) TimerEvent: {}
+[9.139586] (-) TimerEvent: {}
+[9.240178] (-) TimerEvent: {}
+[9.340618] (-) TimerEvent: {}
+[9.441024] (-) TimerEvent: {}
+[9.541395] (-) TimerEvent: {}
+[9.641822] (-) TimerEvent: {}
+[9.742267] (-) TimerEvent: {}
+[9.842847] (-) TimerEvent: {}
+[9.943530] (-) TimerEvent: {}
+[10.044234] (-) TimerEvent: {}
+[10.144882] (-) TimerEvent: {}
+[10.245323] (-) TimerEvent: {}
+[10.345782] (-) TimerEvent: {}
+[10.446175] (-) TimerEvent: {}
+[10.489518] (sensors_filters) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable lidar_filter_node\x1b[0m\n'}
+[10.546376] (-) TimerEvent: {}
+[10.647163] (-) TimerEvent: {}
+[10.747969] (-) TimerEvent: {}
+[10.848576] (-) TimerEvent: {}
+[10.948907] (-) TimerEvent: {}
+[11.049276] (-) TimerEvent: {}
+[11.149707] (-) TimerEvent: {}
+[11.236073] (sensors_filters) StdoutLine: {'line': b'[100%] Built target lidar_filter_node\n'}
+[11.249900] (-) TimerEvent: {}
+[11.255031] (sensors_filters) CommandEnded: {'returncode': 0}
+[11.256963] (sensors_filters) JobProgress: {'identifier': 'sensors_filters', 'progress': 'install'}
+[11.269722] (sensors_filters) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/gonca/atlas_recruitment_ws/src/sensors_filters/build/sensors_filters'], 'cwd': '/home/gonca/atlas_recruitment_ws/src/sensors_filters/build/sensors_filters', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gonca'), ('GIT_ASKPASS', '/home/gonca/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gonca'), ('OLDPWD', '/home/gonca/atlas_recruitment_ws/src'), ('TERM_PROGRAM_VERSION', '1.114.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1003/vscode-ipc-f881e197-e1a7-414e-a5d5-91db16748e2a.sock'), ('ROS_PYTHON_VERSION', '3'), ('GK_GL_PATH', '/tmp/gitkraken/gitlens/gitlens-ipc-server-1541-42965.json'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/gonca/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/gonca/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/gonca/.vscode-server/extensions/ms-python.debugpy-2025.18.0/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1003/bus'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'gonca'), ('NAME', 'goncalopc'), ('WSL_INTEROP', '/run/WSL/1529_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/opt/ros/humble/share/turtlebot3_gazebo/models:/opt/ros/humble/share/turtlebot3_gazebo/models'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/home/gonca/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/gonca/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/gonca/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/bin/remote-cli:/home/gonca/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/gonca/AppData/Local/Programs/Microsoft VS Code:/mnt/c/WinAVR-20100110/bin:/mnt/c/WinAVR-20100110/utils/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin/:/mnt/c/Program Files/IVI Foundation/VISA/Win64/Bin/:/mnt/c/Program Files (x86)/IVI Foundation/IVI/Bin/:/mnt/c/Program Files/IVI Foundation/IVI/Bin/:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin:/mnt/c/Program Files/HP/HP One Agent:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/gonca/Downloads/OpenJDK21U-jdk_x64_windows_hotspot_21.0.6_7/jdk-21.0.6+7/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/MATLAB/R2025b/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2025.3.0/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python39/Scripts/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python39/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python311/Scripts/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python311/:/mnt/c/Users/gonca/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/gonca/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/gonca/anaconda3/Scripts/conda.exe:/mnt/c/Users/gonca/anaconda3/python.exe:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/lib/x64:/mnt/c/msys64/ucrt64/bin:/snap/bin:/home/gonca/.vscode-server/extensions/ms-python.debugpy-2025.18.0/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1003/'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/gonca/.vscode-server/extensions/ms-python.debugpy-2025.18.0/.noConfigDebugAdapterEndpoints/endpoint-8a7bc0290dc61f8b.txt'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/gonca/.vscode-server/data/User/workspaceStorage/766ce0b4fa49d6243f4b9857ecdbd1f6/ms-python.python/pythonrc.py'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1003/vscode-git-8156fe05c8.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GK_GL_ADDR', 'http://127.0.0.1:42965'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/gonca/atlas_recruitment_ws/src/sensors_filters/build/sensors_filters'), ('TURTLEBOT3_MODEL', 'waffle_pi'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[11.280707] (sensors_filters) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[11.283754] (sensors_filters) StdoutLine: {'line': b'-- Installing: /home/gonca/atlas_recruitment_ws/src/sensors_filters/install/sensors_filters/share/ament_index/resource_index/package_run_dependencies/sensors_filters\n'}
+[11.285296] (sensors_filters) StdoutLine: {'line': b'-- Installing: /home/gonca/atlas_recruitment_ws/src/sensors_filters/install/sensors_filters/share/ament_index/resource_index/parent_prefix_path/sensors_filters\n'}
+[11.286157] (sensors_filters) StdoutLine: {'line': b'-- Installing: /home/gonca/atlas_recruitment_ws/src/sensors_filters/install/sensors_filters/share/sensors_filters/environment/ament_prefix_path.sh\n'}
+[11.286478] (sensors_filters) StdoutLine: {'line': b'-- Installing: /home/gonca/atlas_recruitment_ws/src/sensors_filters/install/sensors_filters/share/sensors_filters/environment/ament_prefix_path.dsv\n'}
+[11.286757] (sensors_filters) StdoutLine: {'line': b'-- Installing: /home/gonca/atlas_recruitment_ws/src/sensors_filters/install/sensors_filters/share/sensors_filters/environment/path.sh\n'}
+[11.287024] (sensors_filters) StdoutLine: {'line': b'-- Installing: /home/gonca/atlas_recruitment_ws/src/sensors_filters/install/sensors_filters/share/sensors_filters/environment/path.dsv\n'}
+[11.287325] (sensors_filters) StdoutLine: {'line': b'-- Installing: /home/gonca/atlas_recruitment_ws/src/sensors_filters/install/sensors_filters/share/sensors_filters/local_setup.bash\n'}
+[11.287612] (sensors_filters) StdoutLine: {'line': b'-- Installing: /home/gonca/atlas_recruitment_ws/src/sensors_filters/install/sensors_filters/share/sensors_filters/local_setup.sh\n'}
+[11.287922] (sensors_filters) StdoutLine: {'line': b'-- Installing: /home/gonca/atlas_recruitment_ws/src/sensors_filters/install/sensors_filters/share/sensors_filters/local_setup.zsh\n'}
+[11.288232] (sensors_filters) StdoutLine: {'line': b'-- Installing: /home/gonca/atlas_recruitment_ws/src/sensors_filters/install/sensors_filters/share/sensors_filters/local_setup.dsv\n'}
+[11.288611] (sensors_filters) StdoutLine: {'line': b'-- Installing: /home/gonca/atlas_recruitment_ws/src/sensors_filters/install/sensors_filters/share/sensors_filters/package.dsv\n'}
+[11.289821] (sensors_filters) StdoutLine: {'line': b'-- Installing: /home/gonca/atlas_recruitment_ws/src/sensors_filters/install/sensors_filters/share/ament_index/resource_index/packages/sensors_filters\n'}
+[11.290890] (sensors_filters) StdoutLine: {'line': b'-- Installing: /home/gonca/atlas_recruitment_ws/src/sensors_filters/install/sensors_filters/share/sensors_filters/cmake/sensors_filtersConfig.cmake\n'}
+[11.291142] (sensors_filters) StdoutLine: {'line': b'-- Installing: /home/gonca/atlas_recruitment_ws/src/sensors_filters/install/sensors_filters/share/sensors_filters/cmake/sensors_filtersConfig-version.cmake\n'}
+[11.291503] (sensors_filters) StdoutLine: {'line': b'-- Installing: /home/gonca/atlas_recruitment_ws/src/sensors_filters/install/sensors_filters/share/sensors_filters/package.xml\n'}
+[11.295073] (sensors_filters) CommandEnded: {'returncode': 0}
+[11.314216] (sensors_filters) JobEnded: {'identifier': 'sensors_filters', 'rc': 0}
+[11.316311] (-) EventReactorShutdown: {}

@@ -1,0 +1,586 @@
+[0.000000] (-) TimerEvent: {}
+[0.000437] (sensors_filters) JobQueued: {'identifier': 'sensors_filters', 'dependencies': OrderedDict()}
+[0.000677] (sensors_filters) JobStarted: {'identifier': 'sensors_filters'}
+[0.010681] (sensors_filters) JobProgress: {'identifier': 'sensors_filters', 'progress': 'cmake'}
+[0.011826] (sensors_filters) JobProgress: {'identifier': 'sensors_filters', 'progress': 'build'}
+[0.012843] (sensors_filters) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/gonca/atlas_recruitment_ws/src/sensors_filters/build/sensors_filters', '--', '-j12', '-l12'], 'cwd': '/home/gonca/atlas_recruitment_ws/src/sensors_filters/build/sensors_filters', 'env': OrderedDict([('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'gonca'), ('GIT_ASKPASS', '/home/gonca/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/gonca'), ('OLDPWD', '/home/gonca/atlas_recruitment_ws/src'), ('TERM_PROGRAM_VERSION', '1.114.0'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1003/vscode-ipc-f881e197-e1a7-414e-a5d5-91db16748e2a.sock'), ('ROS_PYTHON_VERSION', '3'), ('GK_GL_PATH', '/tmp/gitkraken/gitlens/gitlens-ipc-server-1541-42965.json'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/gonca/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/gonca/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/gonca/.vscode-server/extensions/ms-python.debugpy-2025.18.0/bundled/libs/debugpy'), ('VSCODE_PYTHON_AUTOACTIVATE_GUARD', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1003/bus'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'gonca'), ('NAME', 'goncalopc'), ('WSL_INTEROP', '/run/WSL/1529_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/opt/ros/humble/share/turtlebot3_gazebo/models:/opt/ros/humble/share/turtlebot3_gazebo/models'), ('ROS_LOCALHOST_ONLY', '1'), ('PATH', '/home/gonca/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand:/home/gonca/.vscode-server/data/User/globalStorage/github.copilot-chat/copilotCli:/home/gonca/.vscode-server/bin/e7fb5e96c0730b9deb70b33781f98e2f35975036/bin/remote-cli:/home/gonca/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Users/gonca/AppData/Local/Programs/Microsoft VS Code:/mnt/c/WinAVR-20100110/bin:/mnt/c/WinAVR-20100110/utils/bin:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin/:/mnt/c/Program Files/IVI Foundation/VISA/Win64/Bin/:/mnt/c/Program Files (x86)/IVI Foundation/IVI/Bin/:/mnt/c/Program Files/IVI Foundation/IVI/Bin/:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin:/mnt/c/Program Files/HP/HP One Agent:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA app/NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Users/gonca/Downloads/OpenJDK21U-jdk_x64_windows_hotspot_21.0.6_7/jdk-21.0.6+7/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/MATLAB/R2025b/bin:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2025.3.0/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python39/Scripts/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python39/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python311/Scripts/:/mnt/c/Users/gonca/AppData/Local/Programs/Python/Python311/:/mnt/c/Users/gonca/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/gonca/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/gonca/anaconda3/Scripts/conda.exe:/mnt/c/Users/gonca/anaconda3/python.exe:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v13.0/lib/x64:/mnt/c/msys64/ucrt64/bin:/snap/bin:/home/gonca/.vscode-server/extensions/ms-python.debugpy-2025.18.0/bundled/scripts/noConfigScripts'), ('XDG_RUNTIME_DIR', '/run/user/1003/'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/gonca/.vscode-server/extensions/ms-python.debugpy-2025.18.0/.noConfigDebugAdapterEndpoints/endpoint-8a7bc0290dc61f8b.txt'), ('LANG', 'en_US.UTF-8'), ('PYTHONSTARTUP', '/home/gonca/.vscode-server/data/User/workspaceStorage/766ce0b4fa49d6243f4b9857ecdbd1f6/ms-python.python/pythonrc.py'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1003/vscode-git-8156fe05c8.sock'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GK_GL_ADDR', 'http://127.0.0.1:42965'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/gonca/atlas_recruitment_ws/src/sensors_filters/build/sensors_filters'), ('TURTLEBOT3_MODEL', 'waffle_pi'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'VSCODE_WSL_EXT_LOCATION/up'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.056036] (sensors_filters) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.099564] (-) TimerEvent: {}
+[0.198983] (sensors_filters) StdoutLine: {'line': b'-- Found rclcpp: 16.0.15 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.199605] (-) TimerEvent: {}
+[0.299892] (-) TimerEvent: {}
+[0.400358] (-) TimerEvent: {}
+[0.465547] (sensors_filters) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.467724] (sensors_filters) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.473209] (sensors_filters) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.481527] (sensors_filters) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.491419] (sensors_filters) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.500548] (-) TimerEvent: {}
+[0.521434] (sensors_filters) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.522499] (sensors_filters) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.600681] (-) TimerEvent: {}
+[0.701215] (-) TimerEvent: {}
+[0.801708] (-) TimerEvent: {}
+[0.902018] (-) TimerEvent: {}
+[1.002566] (-) TimerEvent: {}
+[1.103004] (-) TimerEvent: {}
+[1.203631] (-) TimerEvent: {}
+[1.304604] (-) TimerEvent: {}
+[1.405005] (-) TimerEvent: {}
+[1.505357] (-) TimerEvent: {}
+[1.605716] (-) TimerEvent: {}
+[1.706096] (-) TimerEvent: {}
+[1.806599] (-) TimerEvent: {}
+[1.907298] (-) TimerEvent: {}
+[2.008177] (-) TimerEvent: {}
+[2.108819] (-) TimerEvent: {}
+[2.209250] (-) TimerEvent: {}
+[2.309849] (-) TimerEvent: {}
+[2.410272] (-) TimerEvent: {}
+[2.510864] (-) TimerEvent: {}
+[2.611350] (-) TimerEvent: {}
+[2.711990] (-) TimerEvent: {}
+[2.812350] (-) TimerEvent: {}
+[2.912746] (-) TimerEvent: {}
+[3.013134] (-) TimerEvent: {}
+[3.113584] (-) TimerEvent: {}
+[3.214130] (-) TimerEvent: {}
+[3.314682] (-) TimerEvent: {}
+[3.415377] (-) TimerEvent: {}
+[3.515802] (-) TimerEvent: {}
+[3.616241] (-) TimerEvent: {}
+[3.716733] (-) TimerEvent: {}
+[3.817172] (-) TimerEvent: {}
+[3.917631] (-) TimerEvent: {}
+[4.018266] (-) TimerEvent: {}
+[4.119051] (-) TimerEvent: {}
+[4.219767] (-) TimerEvent: {}
+[4.320550] (-) TimerEvent: {}
+[4.420941] (-) TimerEvent: {}
+[4.521270] (-) TimerEvent: {}
+[4.621599] (-) TimerEvent: {}
+[4.721949] (-) TimerEvent: {}
+[4.822426] (-) TimerEvent: {}
+[4.922785] (-) TimerEvent: {}
+[5.023162] (-) TimerEvent: {}
+[5.123503] (-) TimerEvent: {}
+[5.223865] (-) TimerEvent: {}
+[5.324261] (-) TimerEvent: {}
+[5.424634] (-) TimerEvent: {}
+[5.525096] (-) TimerEvent: {}
+[5.625829] (-) TimerEvent: {}
+[5.726195] (-) TimerEvent: {}
+[5.826553] (-) TimerEvent: {}
+[5.926915] (-) TimerEvent: {}
+[6.027301] (-) TimerEvent: {}
+[6.127738] (-) TimerEvent: {}
+[6.228184] (-) TimerEvent: {}
+[6.328675] (-) TimerEvent: {}
+[6.429092] (-) TimerEvent: {}
+[6.529468] (-) TimerEvent: {}
+[6.629804] (-) TimerEvent: {}
+[6.730248] (-) TimerEvent: {}
+[6.830703] (-) TimerEvent: {}
+[6.931202] (-) TimerEvent: {}
+[7.031766] (-) TimerEvent: {}
+[7.132242] (-) TimerEvent: {}
+[7.232803] (-) TimerEvent: {}
+[7.333226] (-) TimerEvent: {}
+[7.433625] (-) TimerEvent: {}
+[7.534101] (-) TimerEvent: {}
+[7.634549] (-) TimerEvent: {}
+[7.735035] (-) TimerEvent: {}
+[7.835451] (-) TimerEvent: {}
+[7.935883] (-) TimerEvent: {}
+[8.036247] (-) TimerEvent: {}
+[8.136717] (-) TimerEvent: {}
+[8.237206] (-) TimerEvent: {}
+[8.337627] (-) TimerEvent: {}
+[8.438166] (-) TimerEvent: {}
+[8.538689] (-) TimerEvent: {}
+[8.639247] (-) TimerEvent: {}
+[8.739632] (-) TimerEvent: {}
+[8.840183] (-) TimerEvent: {}
+[8.940708] (-) TimerEvent: {}
+[9.041102] (-) TimerEvent: {}
+[9.141559] (-) TimerEvent: {}
+[9.241988] (-) TimerEvent: {}
+[9.342471] (-) TimerEvent: {}
+[9.443031] (-) TimerEvent: {}
+[9.543613] (-) TimerEvent: {}
+[9.644228] (-) TimerEvent: {}
+[9.744890] (-) TimerEvent: {}
+[9.845638] (-) TimerEvent: {}
+[9.946150] (-) TimerEvent: {}
+[10.046537] (-) TimerEvent: {}
+[10.146978] (-) TimerEvent: {}
+[10.247410] (-) TimerEvent: {}
+[10.347955] (-) TimerEvent: {}
+[10.448356] (-) TimerEvent: {}
+[10.548877] (-) TimerEvent: {}
+[10.649325] (-) TimerEvent: {}
+[10.749791] (-) TimerEvent: {}
+[10.754287] (sensors_filters) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[10.803440] (sensors_filters) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[10.827958] (sensors_filters) StdoutLine: {'line': b'-- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)\n'}
+[10.849863] (-) TimerEvent: {}
+[10.860278] (sensors_filters) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[10.950032] (-) TimerEvent: {}
+[11.050599] (-) TimerEvent: {}
+[11.150974] (-) TimerEvent: {}
+[11.251483] (-) TimerEvent: {}
+[11.352216] (-) TimerEvent: {}
+[11.452795] (-) TimerEvent: {}
+[11.553235] (-) TimerEvent: {}
+[11.653632] (-) TimerEvent: {}
+[11.754060] (-) TimerEvent: {}
+[11.854630] (-) TimerEvent: {}
+[11.955034] (-) TimerEvent: {}
+[12.055597] (-) TimerEvent: {}
+[12.156042] (-) TimerEvent: {}
+[12.256536] (-) TimerEvent: {}
+[12.356903] (-) TimerEvent: {}
+[12.457301] (-) TimerEvent: {}
+[12.557859] (-) TimerEvent: {}
+[12.658464] (-) TimerEvent: {}
+[12.759243] (-) TimerEvent: {}
+[12.859777] (-) TimerEvent: {}
+[12.960308] (-) TimerEvent: {}
+[13.060812] (-) TimerEvent: {}
+[13.161169] (-) TimerEvent: {}
+[13.261650] (-) TimerEvent: {}
+[13.362159] (-) TimerEvent: {}
+[13.462796] (-) TimerEvent: {}
+[13.563338] (-) TimerEvent: {}
+[13.663894] (-) TimerEvent: {}
+[13.764247] (-) TimerEvent: {}
+[13.864801] (-) TimerEvent: {}
+[13.953175] (sensors_filters) StdoutLine: {'line': b'-- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)\n'}
+[13.964976] (-) TimerEvent: {}
+[14.065527] (-) TimerEvent: {}
+[14.166024] (-) TimerEvent: {}
+[14.266490] (-) TimerEvent: {}
+[14.366821] (-) TimerEvent: {}
+[14.467144] (-) TimerEvent: {}
+[14.567522] (-) TimerEvent: {}
+[14.668099] (-) TimerEvent: {}
+[14.768786] (-) TimerEvent: {}
+[14.869266] (-) TimerEvent: {}
+[14.969630] (-) TimerEvent: {}
+[15.069960] (-) TimerEvent: {}
+[15.170421] (-) TimerEvent: {}
+[15.270916] (-) TimerEvent: {}
+[15.371385] (-) TimerEvent: {}
+[15.471898] (-) TimerEvent: {}
+[15.572337] (-) TimerEvent: {}
+[15.672856] (-) TimerEvent: {}
+[15.773241] (-) TimerEvent: {}
+[15.873684] (-) TimerEvent: {}
+[15.974259] (-) TimerEvent: {}
+[16.074732] (-) TimerEvent: {}
+[16.175265] (-) TimerEvent: {}
+[16.275936] (-) TimerEvent: {}
+[16.376685] (-) TimerEvent: {}
+[16.477005] (-) TimerEvent: {}
+[16.577382] (-) TimerEvent: {}
+[16.677817] (-) TimerEvent: {}
+[16.778294] (-) TimerEvent: {}
+[16.878984] (-) TimerEvent: {}
+[16.979769] (-) TimerEvent: {}
+[17.080576] (-) TimerEvent: {}
+[17.181143] (-) TimerEvent: {}
+[17.281496] (-) TimerEvent: {}
+[17.381881] (-) TimerEvent: {}
+[17.482358] (-) TimerEvent: {}
+[17.582897] (-) TimerEvent: {}
+[17.683624] (-) TimerEvent: {}
+[17.784431] (-) TimerEvent: {}
+[17.884833] (-) TimerEvent: {}
+[17.985199] (-) TimerEvent: {}
+[18.085511] (-) TimerEvent: {}
+[18.185852] (-) TimerEvent: {}
+[18.286227] (-) TimerEvent: {}
+[18.386719] (-) TimerEvent: {}
+[18.487298] (-) TimerEvent: {}
+[18.587688] (-) TimerEvent: {}
+[18.688044] (-) TimerEvent: {}
+[18.788422] (-) TimerEvent: {}
+[18.888823] (-) TimerEvent: {}
+[18.989279] (-) TimerEvent: {}
+[19.089955] (-) TimerEvent: {}
+[19.190819] (-) TimerEvent: {}
+[19.291562] (-) TimerEvent: {}
+[19.392024] (-) TimerEvent: {}
+[19.492523] (-) TimerEvent: {}
+[19.592963] (-) TimerEvent: {}
+[19.693498] (-) TimerEvent: {}
+[19.794124] (-) TimerEvent: {}
+[19.894774] (-) TimerEvent: {}
+[19.995399] (-) TimerEvent: {}
+[20.095953] (-) TimerEvent: {}
+[20.196430] (-) TimerEvent: {}
+[20.296909] (-) TimerEvent: {}
+[20.397414] (-) TimerEvent: {}
+[20.498011] (-) TimerEvent: {}
+[20.598993] (-) TimerEvent: {}
+[20.699545] (-) TimerEvent: {}
+[20.800014] (-) TimerEvent: {}
+[20.900536] (-) TimerEvent: {}
+[21.001000] (-) TimerEvent: {}
+[21.026051] (sensors_filters) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[21.032222] (sensors_filters) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[21.101100] (-) TimerEvent: {}
+[21.201629] (-) TimerEvent: {}
+[21.302368] (-) TimerEvent: {}
+[21.402907] (-) TimerEvent: {}
+[21.503308] (-) TimerEvent: {}
+[21.603924] (-) TimerEvent: {}
+[21.704690] (-) TimerEvent: {}
+[21.805369] (-) TimerEvent: {}
+[21.906056] (-) TimerEvent: {}
+[22.006733] (-) TimerEvent: {}
+[22.107220] (-) TimerEvent: {}
+[22.207646] (-) TimerEvent: {}
+[22.308049] (-) TimerEvent: {}
+[22.408644] (-) TimerEvent: {}
+[22.509199] (-) TimerEvent: {}
+[22.609804] (-) TimerEvent: {}
+[22.710579] (-) TimerEvent: {}
+[22.811127] (-) TimerEvent: {}
+[22.911519] (-) TimerEvent: {}
+[23.011913] (-) TimerEvent: {}
+[23.112519] (-) TimerEvent: {}
+[23.213128] (-) TimerEvent: {}
+[23.313904] (-) TimerEvent: {}
+[23.414552] (-) TimerEvent: {}
+[23.515060] (-) TimerEvent: {}
+[23.615524] (-) TimerEvent: {}
+[23.715947] (-) TimerEvent: {}
+[23.816319] (-) TimerEvent: {}
+[23.916671] (-) TimerEvent: {}
+[24.017069] (-) TimerEvent: {}
+[24.117556] (-) TimerEvent: {}
+[24.217953] (-) TimerEvent: {}
+[24.318309] (-) TimerEvent: {}
+[24.418669] (-) TimerEvent: {}
+[24.519017] (-) TimerEvent: {}
+[24.541287] (sensors_filters) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[24.548640] (sensors_filters) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[24.556185] (sensors_filters) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[24.619134] (-) TimerEvent: {}
+[24.719486] (-) TimerEvent: {}
+[24.819944] (-) TimerEvent: {}
+[24.920394] (-) TimerEvent: {}
+[25.020799] (-) TimerEvent: {}
+[25.121185] (-) TimerEvent: {}
+[25.221532] (-) TimerEvent: {}
+[25.321868] (-) TimerEvent: {}
+[25.422384] (-) TimerEvent: {}
+[25.523004] (-) TimerEvent: {}
+[25.623474] (-) TimerEvent: {}
+[25.723924] (-) TimerEvent: {}
+[25.824344] (-) TimerEvent: {}
+[25.924803] (-) TimerEvent: {}
+[26.025198] (-) TimerEvent: {}
+[26.125503] (-) TimerEvent: {}
+[26.226108] (-) TimerEvent: {}
+[26.326741] (-) TimerEvent: {}
+[26.427456] (-) TimerEvent: {}
+[26.527809] (-) TimerEvent: {}
+[26.628138] (-) TimerEvent: {}
+[26.728549] (-) TimerEvent: {}
+[26.828973] (-) TimerEvent: {}
+[26.929779] (-) TimerEvent: {}
+[27.030443] (-) TimerEvent: {}
+[27.131161] (-) TimerEvent: {}
+[27.231617] (-) TimerEvent: {}
+[27.332158] (-) TimerEvent: {}
+[27.432727] (-) TimerEvent: {}
+[27.533165] (-) TimerEvent: {}
+[27.633617] (-) TimerEvent: {}
+[27.734251] (-) TimerEvent: {}
+[27.834851] (-) TimerEvent: {}
+[27.935513] (-) TimerEvent: {}
+[28.035947] (-) TimerEvent: {}
+[28.120066] (sensors_filters) StdoutLine: {'line': b'-- Found Qhull version 8.0.2\n'}
+[28.136180] (-) TimerEvent: {}
+[28.236746] (-) TimerEvent: {}
+[28.337357] (-) TimerEvent: {}
+[28.437957] (-) TimerEvent: {}
+[28.538446] (-) TimerEvent: {}
+[28.638899] (-) TimerEvent: {}
+[28.739344] (-) TimerEvent: {}
+[28.839812] (-) TimerEvent: {}
+[28.940304] (-) TimerEvent: {}
+[29.040915] (-) TimerEvent: {}
+[29.141650] (-) TimerEvent: {}
+[29.242121] (-) TimerEvent: {}
+[29.342597] (-) TimerEvent: {}
+[29.443007] (-) TimerEvent: {}
+[29.543640] (-) TimerEvent: {}
+[29.644123] (-) TimerEvent: {}
+[29.744767] (-) TimerEvent: {}
+[29.845435] (-) TimerEvent: {}
+[29.945982] (-) TimerEvent: {}
+[30.046408] (-) TimerEvent: {}
+[30.146884] (-) TimerEvent: {}
+[30.247285] (-) TimerEvent: {}
+[30.347765] (-) TimerEvent: {}
+[30.448271] (-) TimerEvent: {}
+[30.548971] (-) TimerEvent: {}
+[30.649561] (-) TimerEvent: {}
+[30.750009] (-) TimerEvent: {}
+[30.850451] (-) TimerEvent: {}
+[30.950822] (-) TimerEvent: {}
+[31.051256] (-) TimerEvent: {}
+[31.151862] (-) TimerEvent: {}
+[31.252514] (-) TimerEvent: {}
+[31.353233] (-) TimerEvent: {}
+[31.453864] (-) TimerEvent: {}
+[31.554271] (-) TimerEvent: {}
+[31.617302] (sensors_filters) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[31.654450] (-) TimerEvent: {}
+[31.754936] (-) TimerEvent: {}
+[31.855413] (-) TimerEvent: {}
+[31.956144] (-) TimerEvent: {}
+[32.056779] (-) TimerEvent: {}
+[32.157280] (-) TimerEvent: {}
+[32.257756] (-) TimerEvent: {}
+[32.358349] (-) TimerEvent: {}
+[32.459021] (-) TimerEvent: {}
+[32.559682] (-) TimerEvent: {}
+[32.660392] (-) TimerEvent: {}
+[32.760923] (-) TimerEvent: {}
+[32.861372] (-) TimerEvent: {}
+[32.961762] (-) TimerEvent: {}
+[33.062126] (-) TimerEvent: {}
+[33.162440] (-) TimerEvent: {}
+[33.262770] (-) TimerEvent: {}
+[33.363320] (-) TimerEvent: {}
+[33.463859] (-) TimerEvent: {}
+[33.564614] (-) TimerEvent: {}
+[33.665246] (-) TimerEvent: {}
+[33.765740] (-) TimerEvent: {}
+[33.866262] (-) TimerEvent: {}
+[33.966849] (-) TimerEvent: {}
+[34.067403] (-) TimerEvent: {}
+[34.168175] (-) TimerEvent: {}
+[34.268718] (-) TimerEvent: {}
+[34.369141] (-) TimerEvent: {}
+[34.469476] (-) TimerEvent: {}
+[34.569885] (-) TimerEvent: {}
+[34.670271] (-) TimerEvent: {}
+[34.770862] (-) TimerEvent: {}
+[34.871545] (-) TimerEvent: {}
+[34.972075] (-) TimerEvent: {}
+[35.072588] (-) TimerEvent: {}
+[35.173103] (-) TimerEvent: {}
+[35.179119] (sensors_filters) StdoutLine: {'line': b'-- Found pcl_ros: 2.4.5 (/opt/ros/humble/share/pcl_ros/cmake)\n'}
+[35.194411] (sensors_filters) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[35.195482] (sensors_filters) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[35.264329] (sensors_filters) StderrLine: {'line': b'\x1b[33mCMake Warning (dev) at CMakeLists.txt:15 (find_package):\n'}
+[35.264700] (sensors_filters) StderrLine: {'line': b'  Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.\n'}
+[35.264769] (sensors_filters) StderrLine: {'line': b'  Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy\n'}
+[35.264824] (sensors_filters) StderrLine: {'line': b'  command to set the policy and suppress this warning.\n'}
+[35.264876] (sensors_filters) StderrLine: {'line': b'\n'}
+[35.264925] (sensors_filters) StderrLine: {'line': b'  CMake variable PCL_ROOT is set to:\n'}
+[35.264972] (sensors_filters) StderrLine: {'line': b'\n'}
+[35.265018] (sensors_filters) StderrLine: {'line': b'    /usr\n'}
+[35.265064] (sensors_filters) StderrLine: {'line': b'\n'}
+[35.265108] (sensors_filters) StderrLine: {'line': b'  For compatibility, CMake is ignoring the variable.\n'}
+[35.265197] (sensors_filters) StderrLine: {'line': b'This warning is for project developers.  Use -Wno-dev to suppress it.\n'}
+[35.265254] (sensors_filters) StderrLine: {'line': b'\x1b[0m\n'}
+[35.273252] (-) TimerEvent: {}
+[35.274259] (sensors_filters) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[35.368189] (sensors_filters) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[35.368428] (sensors_filters) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[35.368591] (sensors_filters) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[35.370257] (sensors_filters) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[35.373377] (-) TimerEvent: {}
+[35.375615] (sensors_filters) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[35.378004] (sensors_filters) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257\n"}
+[35.394557] (sensors_filters) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[35.394767] (sensors_filters) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[35.396555] (sensors_filters) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[35.397453] (sensors_filters) StdoutLine: {'line': b'-- Configuring done\n'}
+[35.420827] (sensors_filters) StdoutLine: {'line': b'-- Generating done\n'}
+[35.428666] (sensors_filters) StdoutLine: {'line': b'-- Build files have been written to: /home/gonca/atlas_recruitment_ws/src/sensors_filters/build/sensors_filters\n'}
+[35.473604] (-) TimerEvent: {}
+[35.485038] (sensors_filters) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target lidar_filter_node\x1b[0m\n'}
+[35.511951] (sensors_filters) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/lidar_filter_node.dir/src/lidar_filter_node.cpp.o\x1b[0m\n'}
+[35.573744] (-) TimerEvent: {}
+[35.674335] (-) TimerEvent: {}
+[35.774854] (-) TimerEvent: {}
+[35.875381] (-) TimerEvent: {}
+[35.975861] (-) TimerEvent: {}
+[36.076341] (-) TimerEvent: {}
+[36.176965] (-) TimerEvent: {}
+[36.277712] (-) TimerEvent: {}
+[36.378116] (-) TimerEvent: {}
+[36.478690] (-) TimerEvent: {}
+[36.579289] (-) TimerEvent: {}
+[36.679788] (-) TimerEvent: {}
+[36.780322] (-) TimerEvent: {}
+[36.881035] (-) TimerEvent: {}
+[36.981714] (-) TimerEvent: {}
+[37.082111] (-) TimerEvent: {}
+[37.182504] (-) TimerEvent: {}
+[37.283044] (-) TimerEvent: {}
+[37.383458] (-) TimerEvent: {}
+[37.483826] (-) TimerEvent: {}
+[37.584264] (-) TimerEvent: {}
+[37.684792] (-) TimerEvent: {}
+[37.785156] (-) TimerEvent: {}
+[37.885569] (-) TimerEvent: {}
+[37.985916] (-) TimerEvent: {}
+[38.086261] (-) TimerEvent: {}
+[38.186619] (-) TimerEvent: {}
+[38.287025] (-) TimerEvent: {}
+[38.368167] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gonca/atlas_recruitment_ws/src/sensors_filters/src/lidar_filter_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid Lidar_2D_filter::topic_callback(const LaserScan&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[38.368660] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gonca/atlas_recruitment_ws/src/sensors_filters/src/lidar_filter_node.cpp:50:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno matching function for call to \xe2\x80\x98\x1b[01m\x1b[Krclcpp::Publisher<sensor_msgs::msg::LaserScan_<std::allocator<void> > >::publish(std::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > >&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[38.368731] (sensors_filters) StderrLine: {'line': b'   50 |       \x1b[01;31m\x1b[Kpublisher_->publish(filtered_scan)\x1b[m\x1b[K; // publish the filtered scan\n'}
+[38.369387] (sensors_filters) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[38.369455] (sensors_filters) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:31\x1b[m\x1b[K,\n'}
+[38.369508] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[38.369555] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[38.369599] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[38.369642] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[38.369684] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[38.369725] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[38.369766] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[38.369807] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[38.369847] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[38.369888] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/gonca/atlas_recruitment_ws/src/sensors_filters/src/lidar_filter_node.cpp:4\x1b[m\x1b[K:\n'}
+[38.369928] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:254:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class T> std::enable_if_t<(rosidl_generator_traits::is_message<T>::value && std::is_same<T, typename rclcpp::TypeAdapter<MessageT>::ros_message_type>::value)> rclcpp::Publisher<MessageT, AllocatorT>::publish(std::unique_ptr<T, typename std::conditional<std::is_same<typename std::allocator_traits<typename std::allocator_traits<_Allocator>::rebind_traits<typename rclcpp::TypeAdapter<MessageT, void, void>::ros_message_type>::allocator_type>::rebind_alloc<typename rclcpp::TypeAdapter<MessageT, void, void>::ros_message_type>, std::allocator<typename rclcpp::TypeAdapter<MessageT>::ros_message_type> >::value, std::default_delete<typename rclcpp::TypeAdapter<MessageT>::ros_message_type>, rclcpp::allocator::AllocatorDeleter<typename std::allocator_traits<_Allocator>::rebind_traits<typename rclcpp::TypeAdapter<MessageT, void, void>::ros_message_type>::allocator_type> >::type>) [with T = T; MessageT = sensor_msgs::msg::LaserScan_<std::allocator<void> >; AllocatorT = std::allocator<void>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[38.369975] (sensors_filters) StderrLine: {'line': b'  254 |   \x1b[01;36m\x1b[Kpublish\x1b[m\x1b[K(std::unique_ptr<T, ROSMessageTypeDeleter> msg)\n'}
+[38.370014] (sensors_filters) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[38.370063] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:254:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[38.370104] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gonca/atlas_recruitment_ws/src/sensors_filters/src/lidar_filter_node.cpp:50:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > >\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kstd::unique_ptr<T, std::default_delete<sensor_msgs::msg::LaserScan_<std::allocator<void> > > >\x1b[m\x1b[K\xe2\x80\x99\n'}
+[38.370145] (sensors_filters) StderrLine: {'line': b'   50 |       \x1b[01;36m\x1b[Kpublisher_->publish(filtered_scan)\x1b[m\x1b[K; // publish the filtered scan\n'}
+[38.370185] (sensors_filters) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[38.370231] (sensors_filters) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:31\x1b[m\x1b[K,\n'}
+[38.370293] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[38.370337] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[38.370378] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[38.370417] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[38.370456] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[38.370495] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[38.370534] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[38.370572] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[38.370610] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[38.370649] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/gonca/atlas_recruitment_ws/src/sensors_filters/src/lidar_filter_node.cpp:4\x1b[m\x1b[K:\n'}
+[38.370694] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:295:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class T> std::enable_if_t<(rosidl_generator_traits::is_message<T>::value && std::is_same<T, typename rclcpp::TypeAdapter<MessageT>::ros_message_type>::value)> rclcpp::Publisher<MessageT, AllocatorT>::publish(const T&) [with T = T; MessageT = sensor_msgs::msg::LaserScan_<std::allocator<void> >; AllocatorT = std::allocator<void>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[38.370743] (sensors_filters) StderrLine: {'line': b'  295 |   \x1b[01;36m\x1b[Kpublish\x1b[m\x1b[K(const T & msg)\n'}
+[38.370782] (sensors_filters) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[38.370820] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:295:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[38.370863] (sensors_filters) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/move.h:57\x1b[m\x1b[K,\n'}
+[38.370907] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_pair.h:59\x1b[m\x1b[K,\n'}
+[38.370947] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:64\x1b[m\x1b[K,\n'}
+[38.370986] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[38.371025] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/gonca/atlas_recruitment_ws/src/sensors_filters/src/lidar_filter_node.cpp:1\x1b[m\x1b[K:\n'}
+[38.371064] (sensors_filters) StderrLine: {'line': b'/usr/include/c++/11/type_traits: In substitution of \xe2\x80\x98\x1b[01m\x1b[Ktemplate<bool _Cond, class _Tp> using enable_if_t = typename std::enable_if::type [with bool _Cond = false; _Tp = void]\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[38.371163] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:295:3:\x1b[m\x1b[K   required by substitution of \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class T> std::enable_if_t<(rosidl_generator_traits::is_message<T>::value && std::is_same<T, sensor_msgs::msg::LaserScan_<std::allocator<void> > >::value), void> rclcpp::Publisher<sensor_msgs::msg::LaserScan_<std::allocator<void> > >::publish<T>(const T&) [with T = std::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[38.371230] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gonca/atlas_recruitment_ws/src/sensors_filters/src/lidar_filter_node.cpp:50:26:\x1b[m\x1b[K   required from here\n'}
+[38.371311] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/type_traits:2579:11:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno type named \xe2\x80\x98\x1b[01m\x1b[Ktype\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kstruct std::enable_if<false, void>\x1b[m\x1b[K\xe2\x80\x99\n'}
+[38.371362] (sensors_filters) StderrLine: {'line': b' 2579 |     using \x1b[01;31m\x1b[Kenable_if_t\x1b[m\x1b[K = typename enable_if<_Cond, _Tp>::type;\n'}
+[38.371408] (sensors_filters) StderrLine: {'line': b'      |           \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[38.371449] (sensors_filters) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:31\x1b[m\x1b[K,\n'}
+[38.371491] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[38.371531] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[38.371572] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[38.371614] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[38.371658] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[38.371704] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[38.371750] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[38.371791] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[38.371831] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[38.371870] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/gonca/atlas_recruitment_ws/src/sensors_filters/src/lidar_filter_node.cpp:4\x1b[m\x1b[K:\n'}
+[38.371916] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:325:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class T> std::enable_if_t<(typename rclcpp::TypeAdapter<MessageT>::is_specialized::value && std::is_same<T, typename rclcpp::TypeAdapter<MessageT>::custom_type>::value)> rclcpp::Publisher<MessageT, AllocatorT>::publish(std::unique_ptr<T, typename std::conditional<std::is_same<typename std::allocator_traits<typename std::allocator_traits<_Allocator>::rebind_traits<typename rclcpp::TypeAdapter<MessageT, void, void>::custom_type>::allocator_type>::rebind_alloc<typename rclcpp::TypeAdapter<MessageT, void, void>::custom_type>, std::allocator<typename rclcpp::TypeAdapter<MessageT>::custom_type> >::value, std::default_delete<typename rclcpp::TypeAdapter<MessageT>::custom_type>, rclcpp::allocator::AllocatorDeleter<typename std::allocator_traits<_Allocator>::rebind_traits<typename rclcpp::TypeAdapter<MessageT, void, void>::custom_type>::allocator_type> >::type>) [with T = T; MessageT = sensor_msgs::msg::LaserScan_<std::allocator<void> >; AllocatorT = std::allocator<void>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[38.371972] (sensors_filters) StderrLine: {'line': b'  325 |   \x1b[01;36m\x1b[Kpublish\x1b[m\x1b[K(std::unique_ptr<T, PublishedTypeDeleter> msg)\n'}
+[38.372014] (sensors_filters) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[38.372054] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:325:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[38.372094] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/home/gonca/atlas_recruitment_ws/src/sensors_filters/src/lidar_filter_node.cpp:50:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > >\x1b[m\x1b[K\xe2\x80\x99 is not derived from \xe2\x80\x98\x1b[01m\x1b[Kstd::unique_ptr<T, std::default_delete<sensor_msgs::msg::LaserScan_<std::allocator<void> > > >\x1b[m\x1b[K\xe2\x80\x99\n'}
+[38.372137] (sensors_filters) StderrLine: {'line': b'   50 |       \x1b[01;36m\x1b[Kpublisher_->publish(filtered_scan)\x1b[m\x1b[K; // publish the filtered scan\n'}
+[38.372193] (sensors_filters) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[38.372236] (sensors_filters) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:31\x1b[m\x1b[K,\n'}
+[38.372278] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[38.372327] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[38.372369] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[38.372408] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[38.372447] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[38.372558] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[38.372611] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[38.372659] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[38.372701] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[38.372752] (sensors_filters) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/gonca/atlas_recruitment_ws/src/sensors_filters/src/lidar_filter_node.cpp:4\x1b[m\x1b[K:\n'}
+[38.372794] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:367:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Ktemplate<class T> std::enable_if_t<(typename rclcpp::TypeAdapter<MessageT>::is_specialized::value && std::is_same<T, typename rclcpp::TypeAdapter<MessageT>::custom_type>::value)> rclcpp::Publisher<MessageT, AllocatorT>::publish(const T&) [with T = T; MessageT = sensor_msgs::msg::LaserScan_<std::allocator<void> >; AllocatorT = std::allocator<void>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[38.372847] (sensors_filters) StderrLine: {'line': b'  367 |   \x1b[01;36m\x1b[Kpublish\x1b[m\x1b[K(const T & msg)\n'}
+[38.372888] (sensors_filters) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[38.372928] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:367:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  template argument deduction/substitution failed:\n'}
+[38.372975] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:386:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvoid rclcpp::Publisher<MessageT, AllocatorT>::publish(const rcl_serialized_message_t&) [with MessageT = sensor_msgs::msg::LaserScan_<std::allocator<void> >; AllocatorT = std::allocator<void>; rcl_serialized_message_t = rcutils_uint8_array_s]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[38.373018] (sensors_filters) StderrLine: {'line': b'  386 |   \x1b[01;36m\x1b[Kpublish\x1b[m\x1b[K(const rcl_serialized_message_t & serialized_msg)\n'}
+[38.373058] (sensors_filters) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[38.373100] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:386:44:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst rcl_serialized_message_t&\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Kconst rcutils_uint8_array_s&\x1b[m\x1b[K\xe2\x80\x99}\n'}
+[38.373192] (sensors_filters) StderrLine: {'line': b'  386 |   publish(\x1b[01;36m\x1b[Kconst rcl_serialized_message_t & serialized_msg\x1b[m\x1b[K)\n'}
+[38.373250] (sensors_filters) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[38.373296] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:392:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvoid rclcpp::Publisher<MessageT, AllocatorT>::publish(const rclcpp::SerializedMessage&) [with MessageT = sensor_msgs::msg::LaserScan_<std::allocator<void> >; AllocatorT = std::allocator<void>]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[38.373347] (sensors_filters) StderrLine: {'line': b'  392 |   \x1b[01;36m\x1b[Kpublish\x1b[m\x1b[K(const SerializedMessage & serialized_msg)\n'}
+[38.373389] (sensors_filters) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[38.373433] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:392:37:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Kconst rclcpp::SerializedMessage&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[38.373477] (sensors_filters) StderrLine: {'line': b'  392 |   publish(\x1b[01;36m\x1b[Kconst SerializedMessage & serialized_msg\x1b[m\x1b[K)\n'}
+[38.373524] (sensors_filters) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[38.373566] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:406:3:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kcandidate: \xe2\x80\x98\x1b[01m\x1b[Kvoid rclcpp::Publisher<MessageT, AllocatorT>::publish(rclcpp::LoanedMessage<typename rclcpp::TypeAdapter<MessageT>::ros_message_type, AllocatorT>&&) [with MessageT = sensor_msgs::msg::LaserScan_<std::allocator<void> >; AllocatorT = std::allocator<void>; typename rclcpp::TypeAdapter<MessageT>::ros_message_type = sensor_msgs::msg::LaserScan_<std::allocator<void> >]\x1b[m\x1b[K\xe2\x80\x99\n'}
+[38.373608] (sensors_filters) StderrLine: {'line': b'  406 |   \x1b[01;36m\x1b[Kpublish\x1b[m\x1b[K(rclcpp::LoanedMessage<ROSMessageType, AllocatorT> && loaned_msg)\n'}
+[38.373647] (sensors_filters) StderrLine: {'line': b'      |   \x1b[01;36m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[38.373685] (sensors_filters) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:406:64:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  no known conversion for argument 1 from \xe2\x80\x98\x1b[01m\x1b[Kstd::shared_ptr<sensor_msgs::msg::LaserScan_<std::allocator<void> > >\x1b[m\x1b[K\xe2\x80\x99 to \xe2\x80\x98\x1b[01m\x1b[Krclcpp::LoanedMessage<sensor_msgs::msg::LaserScan_<std::allocator<void> >, std::allocator<void> >&&\x1b[m\x1b[K\xe2\x80\x99\n'}
+[38.373730] (sensors_filters) StderrLine: {'line': b'  406 |   publish(\x1b[01;36m\x1b[Krclcpp::LoanedMessage<ROSMessageType, AllocatorT> && loaned_msg\x1b[m\x1b[K)\n'}
+[38.373770] (sensors_filters) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~\x1b[m\x1b[K\n'}
+[38.387160] (-) TimerEvent: {}
+[38.487620] (-) TimerEvent: {}
+[38.588037] (-) TimerEvent: {}
+[38.688414] (-) TimerEvent: {}
+[38.788797] (-) TimerEvent: {}
+[38.889151] (-) TimerEvent: {}
+[38.989510] (-) TimerEvent: {}
+[39.089944] (-) TimerEvent: {}
+[39.190466] (-) TimerEvent: {}
+[39.290920] (-) TimerEvent: {}
+[39.391296] (-) TimerEvent: {}
+[39.491607] (-) TimerEvent: {}
+[39.591971] (-) TimerEvent: {}
+[39.692330] (-) TimerEvent: {}
+[39.792791] (-) TimerEvent: {}
+[39.893294] (-) TimerEvent: {}
+[39.993709] (-) TimerEvent: {}
+[40.094118] (-) TimerEvent: {}
+[40.194534] (-) TimerEvent: {}
+[40.294939] (-) TimerEvent: {}
+[40.395315] (-) TimerEvent: {}
+[40.495788] (-) TimerEvent: {}
+[40.596267] (-) TimerEvent: {}
+[40.696794] (-) TimerEvent: {}
+[40.797180] (-) TimerEvent: {}
+[40.897654] (-) TimerEvent: {}
+[40.998084] (-) TimerEvent: {}
+[41.098613] (-) TimerEvent: {}
+[41.199330] (-) TimerEvent: {}
+[41.300047] (-) TimerEvent: {}
+[41.401009] (-) TimerEvent: {}
+[41.501528] (-) TimerEvent: {}
+[41.602092] (-) TimerEvent: {}
+[41.702571] (-) TimerEvent: {}
+[41.803123] (-) TimerEvent: {}
+[41.903785] (-) TimerEvent: {}
+[42.004445] (-) TimerEvent: {}
+[42.104942] (-) TimerEvent: {}
+[42.205312] (-) TimerEvent: {}
+[42.305630] (-) TimerEvent: {}
+[42.406015] (-) TimerEvent: {}
+[42.506591] (-) TimerEvent: {}
+[42.594020] (sensors_filters) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/lidar_filter_node.dir/build.make:76: CMakeFiles/lidar_filter_node.dir/src/lidar_filter_node.cpp.o] Error 1\n'}
+[42.594443] (sensors_filters) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/lidar_filter_node.dir/all] Error 2\n'}
+[42.594795] (sensors_filters) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[42.599092] (sensors_filters) CommandEnded: {'returncode': 2}
+[42.606743] (-) TimerEvent: {}
+[42.611515] (sensors_filters) JobEnded: {'identifier': 'sensors_filters', 'rc': 2}
+[42.622743] (-) EventReactorShutdown: {}
