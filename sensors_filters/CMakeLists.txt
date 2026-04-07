@@ -9,20 +9,33 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(sensor_msgs REQUIRED)
-#find_package(pcl_conversions REQUIRED)
-#find_package(pcl_ros REQUIRED)
+find_package(pcl_conversions REQUIRED)
+find_package(pcl_ros REQUIRED)
 
-#find_package(PCL REQUIRED)
-#include_directories(${PCL_INCLUDE_DIRS})
-#link_directories(${PCL_LIBRARY_DIRS})
-#add_definitions(${PCL_DEFINITIONS})
+find_package(PCL REQUIRED)
+include_directories(${PCL_INCLUDE_DIRS})
+link_directories(${PCL_LIBRARY_DIRS})
+add_definitions(${PCL_DEFINITIONS})
 
 # Add the executable of the laser scan filter node
 add_executable(lidar2d_filter src/lidar2d_filter.cpp)
 ament_target_dependencies(lidar2d_filter rclcpp sensor_msgs)
 
-install(TARGETS lidar2d_filter
-  DESTINATION lib/${PROJECT_NAME})
+# Add the executable of the PointCloud filter node
+add_executable(pcloud_downsample src/pcloud_downsample.cpp)
+ament_target_dependencies(pcloud_downsample rclcpp sensor_msgs pcl_conversions pcl_ros) # Use pcl for voxel grid filtering
+target_link_libraries(pcloud_downsample ${PCL_LIBRARIES})
+
+# add the executable of the imu filter node
+add_executable(imu_lowpass_filter src/imu_lowpass_filter.cpp)
+ament_target_dependencies(imu_lowpass_filter rclcpp sensor_msgs)
+
+install(TARGETS
+  lidar2d_filter
+  imu_lowpass_filter     
+  pcloud_downsample
+  DESTINATION lib/${PROJECT_NAME}
+)
 
 # Install the launch files
 install(DIRECTORY launch
@@ -32,11 +45,6 @@ install(DIRECTORY launch
 install(DIRECTORY launch rviz
   DESTINATION share/${PROJECT_NAME}
 )
-
-# Add the executable of the PointCloud filter node
-#add_executable(pointcloud_filter_node src/pointcloud_filter_node.cpp)
-#ament_target_dependencies(pointcloud_filter_node rclcpp sensor_msgs pcl_conversions pcl_ros) # Use pcl for voxel grid filtering
-#target_link_libraries(pointcloud_filter_node ${PCL_LIBRARIES})
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)

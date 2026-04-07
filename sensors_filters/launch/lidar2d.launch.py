@@ -28,15 +28,23 @@ def generate_launch_description():
     )
 
     # lidar 2d scan filter node
-    filter_node = Node(
+    lidar2d_node = Node(
         package='sensors_filters',
         executable='lidar2d_filter',
         name='lidar_2d_filter',
         output='screen'
     )
 
+    imu_filter_node = Node(
+        package='sensors_filters',
+        executable='imu_lowpass_filter',
+        name='imu_lowpass_filter',
+        output='screen'
+    )
+
     return LaunchDescription([
         gazebo_launch,
-        filter_node,
+        lidar2d_node,
+        imu_filter_node,
         rviz_node
     ])
