@@ -34,7 +34,7 @@ class Lidar_2D_filter : public rclcpp::Node
         float range = msg.ranges[i];        // get the range value at index i
 
         // check if the range value is NaN, Inf, or outside the valid range defined by the sensor
-        if (std::isnan(range) || std::isinf(range) || range <= 0.15 || range >= msg.range_max) {
+        if (std::isnan(range) || std::isinf(range) || range <= msg.range_min || range >= msg.range_max) {
           filtered_scan->ranges.push_back(std::numeric_limits<float>::quiet_NaN()); // add NaN to the filtered message for invalid range
           if (!msg.intensities.empty()) { 
               filtered_scan->intensities.push_back(0.0); // add 0 intensity for invalid range if the original message has intensity data

@@ -39,6 +39,7 @@ def generate_launch_description():
         package='sensors_filters',
         executable='imu_lowpass_filter',
         name='imu_lowpass_filter',
+        parameters=[{'alpha': 0.2}],
         output='screen'
     )
 

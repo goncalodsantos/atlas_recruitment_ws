@@ -9,6 +9,14 @@ from launch.substitutions import LaunchConfiguration
 def generate_launch_description():
     # packages paths
     pkg_sensors_filters = get_package_share_directory('sensors_filters')
+    pkg_turtlebot4_ignition = get_package_share_directory('turtlebot4_ignition_bringup')
+
+    gazebo_launch = IncludeLaunchDescription(
+        PythonLaunchDescriptionSource(
+            os.path.join(pkg_turtlebot4_ignition, 'launch', 'turtlebot4_ignition.launch.py')
+        ),
+        launch_arguments={'world': 'warehouse'}.items()
+    )
 
     # RViz2 node with the config file
     rviz_node = Node(
@@ -23,12 +31,14 @@ def generate_launch_description():
         package='sensors_filters',
         executable='imu_lowpass_filter',
         name='imu_lowpass_filter',
+        parameters=[{'alpha': 0.2}],
         output='screen'
     )
 
     pcloud_downsample_node = Node(
         package='sensors_filters',
         executable='pcloud_downsample',
+        parameters=[{'voxel_size': 0.1}],
         name='pcloud_downsample',
         output='screen'
     )
@@ -36,5 +46,6 @@ def generate_launch_description():
     return LaunchDescription([
         rviz_node,
         pcloud_downsample_node,
-        imu_filter_node
+        imu_filter_node,
+        gazebo_launch
     ])

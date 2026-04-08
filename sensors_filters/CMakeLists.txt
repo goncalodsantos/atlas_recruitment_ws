@@ -30,6 +30,7 @@ target_link_libraries(pcloud_downsample ${PCL_LIBRARIES})
 add_executable(imu_lowpass_filter src/imu_lowpass_filter.cpp)
 ament_target_dependencies(imu_lowpass_filter rclcpp sensor_msgs)
 
+# Install the executables of the nodes
 install(TARGETS
   lidar2d_filter
   imu_lowpass_filter     
@@ -42,6 +43,7 @@ install(DIRECTORY launch
   DESTINATION share/${PROJECT_NAME}
 )
 
+# Install the RViz config files
 install(DIRECTORY launch rviz
   DESTINATION share/${PROJECT_NAME}
 )
