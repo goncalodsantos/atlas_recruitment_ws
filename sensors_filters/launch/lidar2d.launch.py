@@ -32,7 +32,7 @@ def generate_launch_description():
         package='sensors_filters',
         executable='lidar2d_filter',
         name='lidar_2d_filter',
-        parameters=[{'decimation_factor': 1}],
+        parameters=[{'decimation_factor': 2}],
         output='screen'
     )
 
