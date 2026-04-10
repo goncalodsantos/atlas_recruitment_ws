@@ -30,9 +30,9 @@ class Lidar_2D_filter : public rclcpp::Node
       auto filtered_scan = std::make_shared<sensor_msgs::msg::LaserScan>(); // create a new LaserScan message to store the filtered data
 
       // copy the header and other metadata from the original message to the filtered message
-      filtered_scan->header = msg.header;
-      filtered_scan->angle_min = msg.angle_min;
-      filtered_scan->range_min = msg.range_min;
+      filtered_scan->header = msg.header; 
+      filtered_scan->angle_min = msg.angle_min; 
+      filtered_scan->range_min = msg.range_min; 
       filtered_scan->range_max = msg.range_max;
       filtered_scan->scan_time = msg.scan_time;
       filtered_scan->time_increment = msg.time_increment * step;    // adjust the time increment based on the decimation factor

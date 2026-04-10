@@ -38,7 +38,7 @@ def generate_launch_description():
     pcloud_downsample_node = Node(
         package='sensors_filters',
         executable='pcloud_downsample',
-        parameters=[{'voxel_size': 0.1}],
+        parameters=[{'leaf_size': 0.1}, {'x_min_distance': 0.3}, {'x_max_distance': 20.0}, {'z_min_distance': 0.1}, {'z_max_distance': 5.0}],
         name='pcloud_downsample',
         output='screen'
     )
