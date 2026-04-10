@@ -1,7 +1,7 @@
-#include <memory>
-#include <vector>
-#include <cmath>
-#include <limits>
+#include <memory> // for smart pointers (std::make_shared)
+#include <vector> // for using std::vector to store ranges and intensities
+#include <cmath> // for std::isnan and std::isinf to check for invalid range values
+#include <limits> // for std::numeric_limits to get the quiet_NaN value for invalid range entries
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/laser_scan.hpp"
 
@@ -14,6 +14,7 @@ class Lidar_2D_filter : public rclcpp::Node
     { 
       // declare parameters
       this->declare_parameter<int>("decimation_factor", 1); // parameter to control the decimation of the scan data, default is 1 (no decimation)
+      
       // subscribe to the raw lidar scan topic and publish the filtered scan topic
       subscription_ = this->create_subscription<sensor_msgs::msg::LaserScan>(
       "scan", 10, std::bind(&Lidar_2D_filter::laser_callback, this, _1)); 
@@ -57,7 +58,7 @@ class Lidar_2D_filter : public rclcpp::Node
           }
       }
       // recalculate the angle_max based on the new number of ranges and the adjusted angle increment
-      filtered_scan->angle_max = filtered_scan->angle_min + (filtered_scan->ranges.size() - 1) * filtered_scan->angle_increment;
+      filtered_scan->angle_max = filtered_scan->angle_min + (filtered_scan->ranges.size() - 1) * filtered_scan->angle_increment; // this ensures that the angle_max is consistent with the number of ranges and the angle increment after decimation
       publisher_->publish(*filtered_scan); // publish the filtered scan message to the "scan_filtered" topic
     }
     rclcpp::Subscription<sensor_msgs::msg::LaserScan>::SharedPtr subscription_; 
