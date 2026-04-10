@@ -13,8 +13,8 @@ class PCloud_Downsample : public rclcpp::Node
   public:
     PCloud_Downsample() : Node("pcloud_downsample_node")
     { 
-      this->declare_parameter<double>("x_min_distance", 0.3); // declare a parameter for the minimum distance of points to keep along the x axis with a default value of -5.0m
-      this->declare_parameter<double>("x_max_distance", 20.0); // declare a parameter for the maximum distance of points to keep along the x axis with a default value of 5.0m
+      this->declare_parameter<double>("x_min_distance", 0.3); // declare a parameter for the minimum distance of points to keep along the x axis with a default value of 0.3m
+      this->declare_parameter<double>("x_max_distance", 20.0); // declare a parameter for the maximum distance of points to keep along the x axis with a default value of 20.0m
       this->declare_parameter<double>("z_min_distance", 0.1); // declare a parameter for the minimum distance of points to keep along the z axis with a default value of 0.1m
       this->declare_parameter<double>("z_max_distance", 5.0); // declare a parameter for the maximum distance of points to keep along the z axis with a default value of 5.0m
       this->declare_parameter<double>("leaf_size", 0.1); // declare a parameter for the leaf size of the voxel grid filter with a default value of 0.1 (10cm)
