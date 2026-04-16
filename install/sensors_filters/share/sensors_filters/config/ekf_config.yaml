@@ -1,0 +1,78 @@
+ekf_filter_node:
+    ros__parameters:
+        frequency: 30.0 # The frequency at which to run the filter
+        two_d_mode: true            # Whether to operate in 2D mode (planar motion model), thus no 3D information will be used in the state estimate
+                                    # (automatically zero out all 3D variables, such as Z, roll, pitch, their respective velocities, and Z acceleration)
+        publish_acceleration: false # Whether to publish the acceleration state
+        publish_tf: true            # Whether to broadcast the transformation over the /tf topic.
+        
+# 1. Set the map_frame, odom_frame, and base_link frames to the appropriate frame names for your system.
+#     1a. If your system does not have a map_frame, just remove it, and make sure "world_frame" is set to the value of odom_frame.
+# 2. If you are fusing continuous position data such as wheel encoder odometry, visual odometry, or IMU data, set "world_frame" 
+#    to your odom_frame value. This is the default behavior for robot_localization's state estimation nodes.
+# 3. If you are fusing global absolute position data that is subject to discrete jumps (e.g., GPS or position updates from landmark 
+#    observations) then:
+#     3a. Set your "world_frame" to your map_frame value
+#     3b. MAKE SURE something else is generating the odom->base_link transform. Note that this can even be another state estimation node 
+#         from robot_localization! However, that instance should *not* fuse the global data.
+        map_frame: map              # Defaults to "map" if unspecified
+        odom_frame: odom            # Defaults to "odom" if unspecified
+        base_link_frame: base_link  # Defaults to "base_link" if unspecified
+        world_frame: odom           # Defaults to the value of odom_frame if unspecified
+        
+        # as a planar robot, only needs to concern itself with X, Y, X˙, Y˙, X¨, Y¨, yaw, and yaw˙
+        odom0: odom
+        # The "odom0_config" parameter specifies which elements of the odometry message to fuse:
+        # [x, y, z, roll, pitch, yaw, vx, vy, vz, vroll, vpitch, vyaw, ax, ay, az]
+        # only fuse vx, and vyaw. 
+        # let ekf compute x and y absolute position by fusing the velocity and yaw data, which is more accurate than the absolute position data from odometry (may drift)
+        odom0_config: [false, false, false,  
+                       false, false, false,
+                       true, false, false,
+                       false, false, true,
+                       false, false, false]
+        
+        imu0: imu_filtered 
+        # The "imu0_config" parameter specifies which elements of the IMU message to fuse.
+        # only fuse ax, yaw and yaw rate
+        imu0_config: [false, false, false,
+                      false, false, true,
+                      false, false, false,
+                      false, false, true,
+                      true, false, false]
+
+        # Matrix Q (Uncertainty (variance) in the process model)
+        # The lower the values, the more closely the filter will follow the process model.
+        # The higher the values, the more closely the filter will follow the measurements.
+        process_noise_covariance: [0.05, 0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                                   0.0,  0.05,   0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                                   0.0,  0.0,    0.05,   0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                                   0.0,  0.0,    0.0,    0.05,   0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                                   0.0,  0.0,    0.0,    0.0,    0.05,   0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                                   0.0,  0.0,    0.0,    0.0,    0.0,    0.05,   0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                                   0.0,  0.0,    0.0,    0.0,    0.0,    0.0,    0.05,   0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                                   0.0,  0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.05,   0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                                   0.0,  0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.05,   0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
+                                   0.0,  0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.05,   0.0,    0.0,    0.0,    0.0,    0.0,
+                                   0.0,  0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.05,   0.0,    0.0,    0.0,    0.0,
+                                   0.0,  0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.05,   0.0,    0.0,    0.0,
+                                   0.0,  0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.05,   0.0,    0.0,
+                                   0.0,  0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.05,   0.0,
+                                   0.0,  0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.05]
+
+        # Matrix P (Initial uncertainty in the state estimate)
+        initial_estimate_covariance: [0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                                      0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                                      0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                                      0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                                      0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                                      0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                                      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                                      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                                      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0,
+                                      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0, 0.0,
+                                      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 0.0,
+                                      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0, 0.0, 
+                                      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0, 0.0,
+                                      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1, 0.0,
+                                      0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.1]
