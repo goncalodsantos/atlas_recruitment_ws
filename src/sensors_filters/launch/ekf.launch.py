@@ -27,6 +27,16 @@ def generate_launch_description():
         output='screen'
     )
 
+    # lidar 2d scan filter node
+    lidar2d_node = Node(
+        package='sensors_filters',
+        executable='lidar2d_filter',
+        name='lidar_2d_filter',
+        parameters=[{'decimation_factor': 2}],
+        output='screen'
+    )
+
+    # imu low pass filter node
     imu_filter_node = Node(
         package='sensors_filters',
         executable='imu_lowpass_filter',
@@ -35,6 +45,7 @@ def generate_launch_description():
         output='screen'
     )
 
+    # EKF localization node from robot_localization package with the config file
     ekf_localization_node = Node(
         package='robot_localization',
         executable='ekf_node',
@@ -46,6 +57,7 @@ def generate_launch_description():
     return LaunchDescription([
         gazebo_launch,
         imu_filter_node,
+        lidar2d_node,
         ekf_localization_node,
         rviz_node
     ])
