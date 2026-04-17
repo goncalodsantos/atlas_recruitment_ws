@@ -17,7 +17,7 @@ ekf_filter_node:
 #         from robot_localization! However, that instance should *not* fuse the global data.
         map_frame: map              
         odom_frame: odom            
-        base_link_frame: base_link   
+        base_link_frame: base_footprint #base_link   
         world_frame: odom           
         
         # as a planar robot, only needs to concern itself with X, Y, X˙, Y˙, X¨, Y¨, yaw, and yaw˙

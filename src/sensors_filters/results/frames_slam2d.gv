@@ -1,13 +1,14 @@
 digraph G {
-"odom" -> "base_footprint"[label=" Broadcaster: default_authority\nAverage rate: 59.618\nBuffer length: 5.032\nMost recent transform: 65.261\nOldest transform: 60.229\n"];
+"odom" -> "base_footprint"[label=" Broadcaster: default_authority\nAverage rate: 39.616\nBuffer length: 4.998\nMost recent transform: 44.222\nOldest transform: 39.224\n"];
+"map" -> "odom"[label=" Broadcaster: default_authority\nAverage rate: 5.2\nBuffer length: 5.0\nMost recent transform: 44.556\nOldest transform: 39.556\n"];
 "base_footprint" -> "base_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
 "base_link" -> "caster_back_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
 "base_link" -> "imu_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
 "base_link" -> "base_scan"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
-"base_link" -> "wheel_left_link"[label=" Broadcaster: default_authority\nAverage rate: 19.608\nBuffer length: 4.998\nMost recent transform: 65.261\nOldest transform: 60.263\n"];
-"base_link" -> "wheel_right_link"[label=" Broadcaster: default_authority\nAverage rate: 19.608\nBuffer length: 4.998\nMost recent transform: 65.261\nOldest transform: 60.263\n"];
+"base_link" -> "wheel_left_link"[label=" Broadcaster: default_authority\nAverage rate: 19.675\nBuffer length: 4.93\nMost recent transform: 44.188\nOldest transform: 39.258\n"];
+"base_link" -> "wheel_right_link"[label=" Broadcaster: default_authority\nAverage rate: 19.675\nBuffer length: 4.93\nMost recent transform: 44.188\nOldest transform: 39.258\n"];
 edge [style=invis];
  subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
-"Recorded at time: 1776467661.679573"[ shape=plaintext ] ;
-}->"odom";
+"Recorded at time: 1776464676.5763907"[ shape=plaintext ] ;
+}->"map";
 }
