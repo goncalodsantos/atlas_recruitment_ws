@@ -23,7 +23,7 @@ def generate_launch_description():
         package='rviz2',
         executable='rviz2',
         name='rviz2',
-        arguments=['-d', os.path.join(pkg_sensors_filters, 'rviz', 'scan_filter.rviz')],
+        arguments=['-d', os.path.join(pkg_sensors_filters, 'rviz', 'ekf.rviz')],
         output='screen'
     )
 
