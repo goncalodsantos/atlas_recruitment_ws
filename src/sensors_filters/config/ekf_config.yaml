@@ -43,8 +43,8 @@ ekf_filter_node:
         # This matrix represents the noise we add to the total error after each prediction step. 
         # The lower the values, the more closely the filter will follow the process model.
         # The higher the values, the more closely the filter will follow the measurements.
-        # if users find that a given variable is slow to converge, one approach is to increase the
-        # process_noise_covariance diagonal value for the variable in question, which will cause the filter's predicted error
+        # if a given variable is slow to converge, one approach is to increase the
+        # process_noise_covariance diagonal value for that variable, which will cause the filter's predicted error
         # to be larger, which will cause the filter to trust the incoming measurement more during correction. 
         process_noise_covariance: [0.01, 0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
                                    0.0,  0.01,   0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,    0.0,
