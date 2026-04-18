@@ -56,7 +56,7 @@ def generate_launch_description():
 
     slamtoolbox_node = Node(
         package='slam_toolbox',
-        executable='async_slam_toolbox_node',
+        executable='sync_slam_toolbox_node', # modo sincrono porque é ideal para ambientes simulados
         name='slam_toolbox',
         parameters=[
             os.path.join(pkg_sensors_filters, 'config', 'slam_toolbox_config.yaml'),
