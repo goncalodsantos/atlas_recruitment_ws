@@ -1,4 +1,4 @@
-slam_toolbox_node:
+slam_toolbox:
   ros__parameters:
     solver_plugin: solver_plugins::CeresSolver # default: CeresSolver
     
@@ -12,18 +12,19 @@ slam_toolbox_node:
     # Parâmetros de Processamento
     map_update_interval: 2.0    # default 5.0, é o intervalo em segundos para atualizar o mapa. Reduzir isso pode ajudar a criar um mapa mais atualizado, mas pode aumentar o uso de CPU.
     resolution: 0.05            # default 0.05, é a resolução do mapa em metros por pixel. Reduzir isso pode criar um mapa mais detalhado, mas pode aumentar o uso de memória e o tempo de processamento.
-    max_laser_range: 8.0       # default: 20.0, é a distância máxima que o SLAM Toolbox considerará para os dados do LIDAR. Reduzir isso pode ajudar a eliminar ruído de medições distantes, mas pode resultar em um mapa menos completo.
+    min_laser_range: 0.15       # default 0.0, é a distância mínima que o SLAM Toolbox considerará para os dados do LIDAR. Aumentar isso pode ajudar a eliminar ruído de medições muito próximas, mas pode resultar em um mapa menos completo.
+    max_laser_range: 3.4        # default: 20.0, é a distância máxima que o SLAM Toolbox considerará para os dados do LIDAR. Reduzir isso pode ajudar a eliminar ruído de medições distantes, mas pode resultar em um mapa menos completo.
     stack_size_to_use: 40000000 # default 40000000, é o tamanho da pilha para o solver. Aumentar isso pode ajudar a resolver problemas maiores, mas pode causar falhas se exceder a memória disponível.
 
     # Tuning de Movimento
-    minimum_travel_distance: 0.3  # default 0.5, é a distância mínima que o robô deve se mover antes de considerar uma nova pose para o mapa. Reduzir isso pode ajudar a criar um mapa mais detalhado, mas pode aumentar o ruído e o tempo de processamento.
-    minimum_travel_heading: 0.25   # default 0.5, é o ângulo mínimo que o robô deve girar antes de considerar uma nova pose para o mapa. Reduzir isso pode ajudar a criar um mapa mais detalhado, mas pode aumentar o ruído e o tempo de processamento.
+    minimum_travel_distance: 0.4  # default 0.5 m, é a distância mínima que o robô deve se mover antes de considerar uma nova pose para o mapa. Reduzir isso pode ajudar a criar um mapa mais detalhado, mas pode aumentar o ruído e o tempo de processamento.
+    minimum_travel_heading: 0.35  # (20 deg) default 0.5 rad, é o ângulo mínimo que o robô deve girar antes de considerar uma nova pose para o mapa. Reduzir isso pode ajudar a criar um mapa mais detalhado, mas pode aumentar o ruído e o tempo de processamento.
     
-    # Scan Matcher (Evita paredes duplas/ghosting)
+    # Scan Matcher - é uma técnica que compara os dados do LIDAR com o mapa atual para melhorar a precisão da localização e do mapa.
     use_scan_matching: true                 # default: true, ativa o scan matching para melhorar a precisão do mapa
-    link_match_minimum_response_fine: 0.2  # default 0.1, é o valor mínimo de resposta para considerar um link entre poses durante o scan matching. Reduzir isso pode ajudar a criar um mapa mais conectado, mas pode aumentar o risco de ligações incorretas.
+    link_match_minimum_response_fine: 0.2   # default 0.1, é o valor mínimo de resposta para considerar um link entre poses durante o scan matching. Reduzir isso pode ajudar a criar um mapa mais conectado, mas pode aumentar o risco de ligações incorretas.
 
-    # Loop Closure
+    # Loop Closure - é crucial para corrigir erros acumulados no mapa e melhorar a precisão a longo prazo
     do_loop_closing: true                     # default: true, ativa o loop closure para corrigir erros acumulados no mapa
     loop_search_maximum_distance: 3.0         # default 3.0, é a distância máxima para procurar por loops. Aumentar isso pode ajudar a detectar loops maiores, mas pode aumentar o tempo de processamento.
     loop_match_minimum_response_coarse: 0.35  # default 0.35, é o valor mínimo de resposta para considerar um loop durante a fase coarse do loop closure. Reduzir isso pode ajudar a detectar mais loops, mas pode aumentar o risco de loops incorretos.

@@ -30,6 +30,7 @@ ekf_filter_node:
                        true, true, false,
                        false, false, true,
                        false, false, false]
+        odom0_differential: false
         
         imu0: imu_filtered 
         # only fuse yaw and v_yaw from the IMU
@@ -38,6 +39,7 @@ ekf_filter_node:
                       false, false, false,
                       false, false, true,
                       true, false, false]
+        imu0_differential: false           # only one source of orientation data (yaw from IMU), thus, differential should be set to false 
 
         # Matrix Q (Uncertainty (variance) in the process model)
         # This matrix represents the noise we add to the total error after each prediction step. 

@@ -23,7 +23,7 @@ def generate_launch_description():
         package='rviz2',
         executable='rviz2',
         name='rviz2',
-        arguments=['-d', os.path.join(pkg_sensors_filters, 'rviz', 'ekf.rviz')],
+        arguments=['-d', os.path.join(pkg_sensors_filters, 'rviz', 'slam2d.rviz')],
         output='screen'
     )
 
@@ -57,7 +57,7 @@ def generate_launch_description():
     slamtoolbox_node = Node(
         package='slam_toolbox',
         executable='async_slam_toolbox_node',
-        name='slam_toolbox_node',
+        name='slam_toolbox',
         parameters=[
             os.path.join(pkg_sensors_filters, 'config', 'slam_toolbox_config.yaml'),
             {'use_sim_time': True} 
