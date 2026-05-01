@@ -1,5 +1,11 @@
 # Recrutamento ATLAS Software & AI
 
+## Dependencias
+```bash
+sudo apt install ros-humble-pcl-ros                 # for pointcloud downsampling
+sudo apt install ros-humble-robot-localization      # for EKF
+``` 
+
 ## Processamento de Dados dos Sensores
 
 ### Nós (C++)

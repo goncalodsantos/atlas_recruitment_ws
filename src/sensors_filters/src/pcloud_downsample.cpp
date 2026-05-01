@@ -13,27 +13,31 @@ class PCloud_Downsample : public rclcpp::Node
   public:
     PCloud_Downsample() : Node("pcloud_downsample_node")
     { 
-      this->declare_parameter<double>("x_min_distance", 0.3); // declare a parameter for the minimum distance of points to keep along the x axis with a default value of 0.3m
-      this->declare_parameter<double>("x_max_distance", 20.0); // declare a parameter for the maximum distance of points to keep along the x axis with a default value of 20.0m
-      this->declare_parameter<double>("z_min_distance", 0.1); // declare a parameter for the minimum distance of points to keep along the z axis with a default value of 0.1m
-      this->declare_parameter<double>("z_max_distance", 5.0); // declare a parameter for the maximum distance of points to keep along the z axis with a default value of 5.0m
-      this->declare_parameter<double>("leaf_size", 0.1); // declare a parameter for the leaf size of the voxel grid filter with a default value of 0.1 (10cm)
+      this->declare_parameter<double>("x_min", 0.3); // declare a parameter for the minimum distance of points to keep along the x axis with a default value of 0.3m
+      this->declare_parameter<double>("x_max", 20.0); // declare a parameter for the maximum distance of points to keep along the x axis with a default value of 20.0m
+      this->declare_parameter<double>("y_min", 0.0); // declare a parameter for the minimum distance of points to keep along the y axis with a default value of 0.1m
+      this->declare_parameter<double>("y_max", 20.0); // declare a parameter for the maximum distance of points to keep along the y axis with a default value of 5.0m
+      this->declare_parameter<double>("z_min", 0.1); // declare a parameter for the minimum distance of points to keep along the z axis with a default value of 0.1m
+      this->declare_parameter<double>("z_max", 5.0); // declare a parameter for the maximum distance of points to keep along the z axis with a default value of 5.0m
+      this->declare_parameter<double>("leaf_size", 0.15); // declare a parameter for the leaf size of the voxel grid filter with a default value of 0.1 (10cm)
       
       // subscribe to the raw pointcloud topic and publish the filtered pointcloud topic
       subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
-      "/oakd/rgb/preview/depth/points", 10, std::bind(&PCloud_Downsample::cloud_callback, this, _1)); 
+      "/rtabmap/cloud_map", 10, std::bind(&PCloud_Downsample::cloud_callback, this, _1)); // /oakd/rgb/preview/depth/points
       
-      publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("pcloud_downsampled", 10);
+      publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/rtabmap/cloud_map_downsampled", 10);
     }
 
   private:
 
     void cloud_callback(const sensor_msgs::msg::PointCloud2::SharedPtr msg) {
     double leaf_size = this->get_parameter("leaf_size").as_double(); // get the leaf size from the parameter server
-    double x_min_distance = this->get_parameter("x_min_distance").as_double(); // get the minimum distance from the parameter server
-    double x_max_distance = this->get_parameter("x_max_distance").as_double(); // get the maximum distance from the parameter server
-    double z_min_distance = this->get_parameter("z_min_distance").as_double(); // get the minimum distance from the parameter server
-    double z_max_distance = this->get_parameter("z_max_distance").as_double(); // get the maximum distance from the parameter server
+    double x_min_dist = this->get_parameter("x_min").as_double(); // get the minimum distance from the parameter server
+    double x_max_dist = this->get_parameter("x_max").as_double(); // get the maximum distance from the parameter server
+    double y_min_dist = this->get_parameter("y_min").as_double(); // get the minimum distance from the parameter server
+    double y_max_dist = this->get_parameter("y_max").as_double(); // get the maximum distance from the parameter server
+    double z_min_dist = this->get_parameter("z_min").as_double(); // get the minimum distance from the parameter server
+    double z_max_dist = this->get_parameter("z_max").as_double(); // get the maximum distance from the parameter server
 
     // Converter ROS pointcloud msg to PCL binary pointcloud msg
     pcl::PCLPointCloud2::Ptr pcl_pc2(new pcl::PCLPointCloud2());
@@ -44,21 +48,29 @@ class PCloud_Downsample : public rclcpp::Node
     pcl::PassThrough<pcl::PCLPointCloud2> pass_z;
     pass_z.setInputCloud(pcl_pc2);
     pass_z.setFilterFieldName("z"); // along the z axis (height)
-    pass_z.setFilterLimits(z_min_distance, z_max_distance); // ignora o chão e o teto
+    pass_z.setFilterLimits(z_min_dist, z_max_dist); // ignora o chão e o teto
     pass_z.filter(*cloud_passthrough_z);
 
-     // PassThrough filter to remove points along the x axis (width)
+    // PassThrough filter to remove points along the x axis (depth)
     pcl::PCLPointCloud2::Ptr cloud_passthrough_x(new pcl::PCLPointCloud2());
     pcl::PassThrough<pcl::PCLPointCloud2> pass_x;
     pass_x.setInputCloud(cloud_passthrough_z);
-    pass_x.setFilterFieldName("x"); // along the x axis (width)
-    pass_x.setFilterLimits(x_min_distance, x_max_distance);
+    pass_x.setFilterFieldName("x"); // along the x axis (depth)
+    pass_x.setFilterLimits(x_min_dist, x_max_dist);
     pass_x.filter(*cloud_passthrough_x);
+
+    // PassThrough filter to remove points along the y axis (width)
+    pcl::PCLPointCloud2::Ptr cloud_passthrough_y(new pcl::PCLPointCloud2());
+    pcl::PassThrough<pcl::PCLPointCloud2> pass_y;
+    pass_y.setInputCloud(cloud_passthrough_x);
+    pass_y.setFilterFieldName("y"); // along the y axis (width)
+    pass_y.setFilterLimits(y_min_dist, y_max_dist);
+    pass_y.filter(*cloud_passthrough_y);
 
     // Voxel Grid
     pcl::PCLPointCloud2::Ptr cloud_voxel(new pcl::PCLPointCloud2());
     pcl::VoxelGrid<pcl::PCLPointCloud2> sor;
-    sor.setInputCloud(cloud_passthrough_x);
+    sor.setInputCloud(cloud_passthrough_y);
     sor.setLeafSize(static_cast<float>(leaf_size), static_cast<float>(leaf_size), static_cast<float>(leaf_size)); // Set the leaf size for the voxel grid filter using the parameter value
     sor.filter(*cloud_voxel);
 

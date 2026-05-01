@@ -39,7 +39,10 @@ install(TARGETS
 )
 
 # Install the launch files and config files and rviz config
-install(DIRECTORY config launch rviz
+install(DIRECTORY 
+  launch
+  config  
+  rviz
   DESTINATION share/${PROJECT_NAME}
 )
 

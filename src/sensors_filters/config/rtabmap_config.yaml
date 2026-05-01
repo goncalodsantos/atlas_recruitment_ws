@@ -1,0 +1,56 @@
+rtabmap:
+  ros__parameters:
+    use_sim_time: true
+
+    frame_id: base_link
+    odom_frame_id: odom
+    map_frame_id: map
+    publish_tf: true
+
+    subscribe_depth: true
+    subscribe_rgb: true
+    subscribe_rgbd: false
+    subscribe_scan: false
+    subscribe_scan_cloud: false
+    subscribe_odom_info: false
+    approx_sync: true
+    queue_size: 30
+
+    database_path: ~/.ros/rtabmap.db
+
+    RGBD/LinearUpdate: "0.05"
+    RGBD/AngularUpdate: "0.05"
+    RGBD/CreateOccupancyGrid: "false"
+    RGBD/ProximityBySpace: "true"
+    RGBD/NeighborLinkRefining: "true"
+    RGBD/OptimizeFromGraphEnd: "false"
+
+    Reg/Strategy: "0"
+    Vis/MinInliers: "15"
+    Vis/InlierDistance: "0.1"
+    Vis/CorType: "0"
+    Kp/MaxFeatures: "600"
+
+    Mem/IncrementalMemory: "true"
+    Mem/InitWMWithAllNodes: "false"
+
+    Grid/FromDepth: "true"
+    Grid/3D: "true"
+    Grid/RangeMax: "12.0"
+    Grid/CellSize: "0.05"
+    Grid/DepthDecimation: "4"
+    Grid/NoiseFilteringRadius: "0.1"
+    Grid/NoiseFilteringMinNeighbors: "5"
+    Grid/ClusterRadius: "0.2"
+    Grid/MinClusterSize: "20"
+
+    Icp/VoxelSize: "0.08"
+
+    Optimizer/GravitySigma: "0.3"
+
+    Rtabmap/DetectionRate: "2.0"
+    Rtabmap/TimeThr: "700"
+    Rtabmap/MemoryThr: "0"
+
+    publish_map: true
+    publish_null_when_lost: false

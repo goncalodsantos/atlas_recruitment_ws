@@ -1,10 +1,9 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription, DeclareLaunchArgument
+from launch.actions import IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
-from launch.substitutions import LaunchConfiguration
 
 def generate_launch_description():
     # packages paths
@@ -38,7 +37,15 @@ def generate_launch_description():
     pcloud_downsample_node = Node(
         package='sensors_filters',
         executable='pcloud_downsample',
-        parameters=[{'leaf_size': 0.1}, {'x_min_distance': 0.3}, {'x_max_distance': 20.0}, {'z_min_distance': 0.1}, {'z_max_distance': 5.0}],
+        parameters=[{
+            'leaf_size': 0.15,
+            'x_min': 0.3,
+            'x_max': 20.0,
+            'y_min': -10.0,
+            'y_max': 11.0,
+            'z_min': 0.1,
+            'z_max': 5.0
+        }],
         name='pcloud_downsample',
         output='screen'
     )
