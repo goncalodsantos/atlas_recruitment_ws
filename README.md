@@ -4,6 +4,7 @@
 ```bash
 sudo apt install ros-humble-pcl-ros                 # for pointcloud downsampling
 sudo apt install ros-humble-robot-localization      # for EKF
+sudo apt install ros-humble-rtabmap ros-humble-rtabmap-ros ros-humble-rtabmap-viz
 ``` 
 
 ## Processamento de Dados dos Sensores
