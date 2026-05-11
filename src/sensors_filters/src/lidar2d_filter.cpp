@@ -13,7 +13,7 @@ class Lidar_2D_filter : public rclcpp::Node
     Lidar_2D_filter() : Node("lidar_2d_filter")
     { 
       // declare parameters
-      this->declare_parameter<int>("decimation_factor", 1); // parameter to control the decimation of the scan data, default is 1 (no decimation)
+      this->declare_parameter<int>("decimation_factor", 2); // parameter to control the decimation of the scan data, default is 1 (no decimation)
       
       // subscribe to the raw lidar scan topic and publish the filtered scan topic
       subscription_ = this->create_subscription<sensor_msgs::msg::LaserScan>(
