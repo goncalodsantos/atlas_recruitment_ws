@@ -41,7 +41,7 @@ def generate_launch_description():
             'leaf_size': 0.15,
             'x_min': 0.3,
             'x_max': 20.0,
-            'y_min': -10.0,
+            'y_min': -11.0,
             'y_max': 11.0,
             'z_min': 0.1,
             'z_max': 5.0
