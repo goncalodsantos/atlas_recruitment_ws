@@ -21,3 +21,7 @@ __pycache__/
 
 # Extensões compiladas
 *.so
+
+# bag
+*.db3
+*.db

@@ -72,7 +72,7 @@ def generate_launch_description():
         remappings=[
             ('rgb/image', '/oakd/rgb/preview/image_raw'),
             ('rgb/camera_info', '/oakd/rgb/preview/camera_info'),
-            ('depth/image', '/oakd/rgb/preview/depth'), 
+            ('depth/image', '/oakd/rgb/preview/depth'),
             ('odom', '/odometry/filtered'),
         ]
     )

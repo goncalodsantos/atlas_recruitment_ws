@@ -2,55 +2,72 @@ rtabmap:
   ros__parameters:
     use_sim_time: true
 
-    frame_id: base_link
+    # frames
+    frame_id: base_footprint
     odom_frame_id: odom
     map_frame_id: map
     publish_tf: true
 
+    # subscrição aos tópicos da câmara (RGB + Depth)
     subscribe_depth: true
     subscribe_rgb: true
     subscribe_rgbd: false
     subscribe_scan: false
     subscribe_scan_cloud: false
-    subscribe_odom_info: false
-    approx_sync: true
-    queue_size: 30
+    subscribe_odom_info: false  # odometria vem do EKF (wheel odom + IMU)
+    approx_sync: true           # ApproximateTime para sincronizar RGB e Depth
+    queue_size: 10              # tamanho da fila de sincronização
 
     database_path: ~/.ros/rtabmap.db
 
-    RGBD/LinearUpdate: "0.05"
-    RGBD/AngularUpdate: "0.05"
-    RGBD/CreateOccupancyGrid: "false"
-    RGBD/ProximityBySpace: "true"
-    RGBD/NeighborLinkRefining: "true"
-    RGBD/OptimizeFromGraphEnd: "false"
+    # --- RGBD-SLAM ---
+    RGBD/Enabled: "true"                  # ativa o modo RGBD-SLAM (vs. bag-of-words puro)
+    RGBD/LinearUpdate: "0.15"            # distância mínima (m) para criar um novo nó
+    RGBD/AngularUpdate: "0.2"           # ângulo mínimo (rad) para criar um novo nó
+    RGBD/CreateOccupancyGrid: "false"    # grid criado via Grid/ params abaixo, não aqui
+    RGBD/ProximityBySpace: "true"        # loop closure por proximidade espacial (não só temporal)
+    RGBD/NeighborLinkRefining: "true"    # refina links vizinhos com ICP para melhorar precisão local
+    RGBD/OptimizeFromGraphEnd: "false"   # otimiza a partir do nó mais antigo (preserva referencial)
 
-    Reg/Strategy: "0"
-    Vis/MinInliers: "15"
-    Vis/InlierDistance: "0.1"
-    Vis/CorType: "0"
-    Kp/MaxFeatures: "600"
+    # --- Registo visual ---
+    Reg/Strategy: "0"           # 0=Visual (features), 1=ICP, 2=Visual+ICP
+    Vis/MinInliers: "15"        # mínimo de inliers para aceitar correspondência entre nós
+    Vis/InlierDistance: "0.1"   # distância máxima (m) para um ponto ser considerado inlier
+    Vis/CorType: "0"            # 0=Features Matching, 1=Optical Flow
+    Kp/MaxFeatures: "600"       # máximo de features extraídas por imagem
+    Kp/MaxDepth: "5.0"         # profundidade máxima (m) para extração de keypoints
+    Kp/MinDepth: "0.3"          # profundidade mínima (m) para extração de keypoints
 
-    Mem/IncrementalMemory: "true"
-    Mem/InitWMWithAllNodes: "false"
+    # --- Memória ---
+    Mem/IncrementalMemory: "true"    # true=modo SLAM (cria novos nós), false=Localization
+    Mem/InitWMWithAllNodes: "false"  # false=inicializa WM apenas com sessão anterior (não mapa completo)
 
-    Grid/FromDepth: "true"
-    Grid/3D: "true"
-    Grid/RangeMax: "12.0"
-    Grid/CellSize: "0.05"
-    Grid/DepthDecimation: "4"
-    Grid/NoiseFilteringRadius: "0.1"
-    Grid/NoiseFilteringMinNeighbors: "5"
-    Grid/ClusterRadius: "0.2"
-    Grid/MinClusterSize: "20"
+    # --- Occupancy Grid 3D ---
+    Grid/FromDepth: "true"               # gera o grid a partir da imagem de profundidade
+    Grid/3D: "true"                      # cria OctoMap 3D em vez de grid 2D
+    Grid/RangeMax: "5.0"                 # distância máxima (m) do sensor usada para o grid
+    Grid/CellSize: "0.05"                # resolução de cada célula do grid (5 cm)
+    Grid/DepthDecimation: "4"            # decimação da depth image: 4x menos pontos → mais rápido
+    Grid/NoiseFilteringRadius: "0.1"     # raio (m) para filtrar pontos de ruído isolados
+    Grid/NoiseFilteringMinNeighbors: "5" # mínimo de vizinhos para não ser filtrado como ruído
+    Grid/ClusterRadius: "0.2"            # raio máximo (m) para agregar pontos no mesmo cluster
+    Grid/MinClusterSize: "10"            # mínimo de pontos para um cluster ser considerado válido
+    Grid/NormalsSegmentation: "true"     # segmenta chão/obstáculos por normais (melhora precisão)
+    Grid/FootprintLength: "0.34"         # comprimento (m) do footprint do TurtleBot4
+    Grid/FootprintWidth: "0.34"          # largura (m) do footprint do TurtleBot4
+    Grid/FootprintHeight: "0.36"         # altura (m) do footprint do TurtleBot4
 
-    Icp/VoxelSize: "0.08"
+    # --- ICP (usado pelo NeighborLinkRefining acima) ---
+    Icp/VoxelSize: "0.08"           # downsampling das nuvens de pontos antes do ICP
 
-    Optimizer/GravitySigma: "0.3"
+    # --- Otimizador do grafo ---
+    Optimizer/GravitySigma: "0.3"   # constraint de gravidade do IMU na otimização do grafo
 
-    Rtabmap/DetectionRate: "2.0"
-    Rtabmap/TimeThr: "700"
-    Rtabmap/MemoryThr: "0"
+    # --- Loop Closure ---
+    Rtabmap/DetectionRate: "1.0"    # frequência (Hz) de deteção de loop closure
+    Rtabmap/TimeThr: "700"          # tempo máximo (ms) por iteração — protege CPU em simulação
+    Rtabmap/MemoryThr: "0"          # máximo de nós na WM (0=ilimitado)
 
-    publish_map: true
-    publish_null_when_lost: false
+    # --- Publicação ---
+    publish_map: true               # publica occupancy grid e point cloud do mapa
+    publish_null_when_lost: false   # não publica transform nula quando perde localização

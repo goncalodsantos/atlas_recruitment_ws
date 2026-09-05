@@ -23,9 +23,9 @@ class PCloud_Downsample : public rclcpp::Node
       
       // subscribe to the raw pointcloud topic and publish the filtered pointcloud topic
       subscription_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
-      "/rtabmap/cloud_map", 10, std::bind(&PCloud_Downsample::cloud_callback, this, _1)); // /oakd/rgb/preview/depth/points
+      "/cloud_map", 10, std::bind(&PCloud_Downsample::cloud_callback, this, _1)); // /oakd/rgb/preview/depth/points
       
-      publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/rtabmap/cloud_map_downsampled", 10);
+      publisher_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("/cloud_map_downsampled", 10);
     }
 
   private:
